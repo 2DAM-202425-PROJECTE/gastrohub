@@ -12,7 +12,7 @@ module.exports = {
         'pgray': '#31363F',
         'pgray-dark': '#282c30',
 
-        'pteal-light': 'rgba(209,240,243,0.39)',
+        'pteal-light': 'rgba(209,240,243)',
         'pteal': '#76ABAE',
         'pteal-dark': '#48676a',
 
