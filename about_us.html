@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GastroHUB | About Us</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script type="module" src="/javascript/header-footer-loader.js"></script>
+    <link rel="stylesheet" href="/css/header-footer.css"/>
+    <script type="module" src="/javascript/header.js"></script>
+    <link href="./css/login.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estils generals per al mode clar (per defecte) */
+        body {
+            font-family: 'Roboto', sans-serif; /* Aplicar font Roboto */
+            background-color: #ffffff; /* Fons clar per al mode clar */
+            color: #000000; /* Text fosc per al mode clar */
+        }
+
+        /* Estils per al mode fosc */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212; /* Fons fosc per al mode fosc */
+                color: #ffffff; /* Text clar per al mode fosc */
+            }
+
+            /* Fons i text clar per la secció de valors */
+            .values-section {
+                background-color: #333333; /* Fons fosc per a la secció de valors en mode fosc */
+                color: #ffffff; /* Text clar per a la secció de valors en mode fosc */
+            }
+
+            /* Canvi de color per als títols en mode fosc */
+            .section-title, .hero h1, .values-section h2 {
+                color: #80cbc4; /* Teal per als títols en mode fosc */
+            }
+
+            .section-content h2{
+                color: #80cbc4;
+            }
+
+            .values-list li {
+                background-color: #455a64; /* Fons més fosc per als elements de la llista en mode fosc */
+                color: #80cbc4; /* Text clar per a la llista en mode fosc */
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .container-about {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .text-block {
+            max-width: 600px;
+        }
+
+        .text-block h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .text-block p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        /* Estils per a la secció de valors */
+        .values-section {
+            padding: 40px;
+            border: 1px solid black; /* Vora negra */
+            border-radius: 50px; /* Bordes arrodonits */
+        }
+
+        .values-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Estils per a la llista de valors */
+        .values-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Cada valor individual */
+        .values-list li {
+            background: #2d4148; /* Blau vibrant */
+            color: #ffffff; /* Text blanc */
+            padding: 20px 40px; /* Més espai per al text */
+            border-radius: 10px; /* Bordes arrodonits */
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            min-width: 180px;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suau */
+            transition: all 0.3s ease; /* Transició més suau */
+            margin-bottom: 30px; /* Espai inferior per evitar aglomeracions */
+        }
+
+        /* Efecte al passar el ratolí sobre els elements de la llista */
+        .values-list li:hover {
+            transform: translateY(-5px); /* Lleuger moviment cap amunt */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra més gran per ressaltar */
+            background-color: #0288d1; /* Fons més fosc al passar el ratolí */
+        }
+
+        /* Tooltip per mostrar descripció quan es passa el ratolí */
+        .values-list li::after {
+            content: attr(data-description); /* Agafa la descripció del valor */
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Afegit transform per a l'animació */
+            white-space: nowrap;
+        }
+
+        /* Millora de l'animació del tooltip */
+        .values-list li:hover::after {
+            display: block;
+            opacity: 1;
+            transform: translateX(-50%) translateY(10px); /* Desplaçament cap amunt quan apareix */
+        }
+
+        /* Ajustaments per a mòbils */
+        @media (max-width: 600px) {
+            .values-list li {
+                font-size: 1em; /* Mida més petita per a dispositius petits */
+                padding: 15px 30px; /* Mida més petita per a dispositius petits */
+            }
+        }
+    </style>
+</head>
+<body class="light"> <!-- Clau per controlar el mode -->
+<header id="navbar"></header>
+<section>
+    <div class="container-about">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>About GastroHub</h1>
+            <p>Where culinary vision meets cutting-edge resources. At GastroHub, we're empowering food entrepreneurs to elevate their brands and connect with a community that celebrates innovation in every bite.</p>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="section">
+            <div class="section-title">Our Story</div>
+            <div class="section-content">
+                <img src="our-story.jpg" alt="GastroHub founders">
+                <div class="text-block">
+                    <h2>Born from Passion, Driven by Community</h2>
+                    <p>GastroHub was founded with a simple mission: to create a dynamic platform where culinary artists, chefs, and food visionaries could find the resources they need to thrive. From budding entrepreneurs to experienced restaurateurs, we provide the infrastructure to help creators focus on what they love—crafting unforgettable culinary experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="section">
+            <div class="section-title">Our Mission</div>
+            <div class="section-content">
+                <div class="text-block">
+                    <h2>Supporting Creators in the Food Industry</h2>
+                    <p>At GastroHub, our mission is to make innovation accessible and efficient for food businesses. We streamline the operational side of the culinary world with tools and solutions for supply chain management, branding, and community building, allowing creators to focus on the culinary magic that sets them apart.</p>
+                </div>
+                <img src="mission.jpg" alt="Team collaboration">
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="values-section">
+            <div class="section-title">Our Values</div>
+            <ul class="values-list">
+                <li data-description="We innovate to keep pushing the boundaries of food industry solutions.">Innovation</li>
+                <li data-description="We strive for excellence in every project we undertake.">Quality</li>
+                <li data-description="Sustainability is at the heart of our practices, promoting long-term solutions.">Sustainability</li>
+                <li data-description="We are committed to fostering a strong community within the culinary world.">Community</li>
+                <li data-description="We empower creators to take charge of their visions and success.">Empowerment</li>
+            </ul>
+        </section>
+    </div>
+
+</section>
+<footer id="footer"></footer>
+</body>
+</html>

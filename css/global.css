@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-section{
-    padding-top: 100px;
+body {
+    transition: filter 0.5s ease; /* Aplica una transición suave al filtro */
 }

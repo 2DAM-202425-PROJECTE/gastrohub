@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.container *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+/*@keyframes fadeOut {*/
+/*    from {*/
+/*        opacity: 1;*/
+/*        transform: translate(-50%, -50%);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 0;*/
+/*        transform: translate(-50%, -60%);*/
+/*    }*/
+/*}*/
+
+/*#my-popover.hidden {*/
+/*    animation: fadeOut 0.5s forwards; !* Aplica la animación de fade-out *!*/
+/*}*/
+
+
+#my-popover {
+    border-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.50), 0 0 20px rgba(0, 0, 0, 0.50), 0 0 30px rgba(0, 0, 0, 0.50), 0 0 40px rgba(0, 0, 0, 0.50); /* Neon effect */
+    padding: 0; /* No internal padding */
+    margin: 0; /* No external margin */
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be exactly in the center */
+    border: 3px solid white;
+    border-radius: 35px;
+    opacity: 0; /* Start with the popover hidden */
+    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+}
+
+
+
+/* Estilos específicos para el botón del ojo */
+.password-container .eye-button {
+    color: #333;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 16px; /* Ajusta el tamaño del icono si es necesario */
+    width: 30px; /* Define un ancho fijo */
+    height: 30px; /* Define un alto fijo */
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.eye-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.password-container input {
+    width: calc(100% - 40px); /* Ajusta el ancho del input para dejar espacio al botón */
+    padding-right: 40px; /* Añade espacio interno a la derecha para el botón */
+}
+
+.eye-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.eye-button:hover {
+    background-color: #d8d8d8;
+    /*vamos a poner la forma cuadrada y el fondo mas grande y quitar el margin*/
+    border-radius: 5px;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    border: 2px solid white;
+
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+    background-color: #76ABAE;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.container h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sign-in-btn:hover,
+.sign-up-btn:hover {
+    background-color: #48676a;
+}
+
+.container button.hidden1{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+button {
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block; /* Ensure the error message is displayed as a block element */
+}
+
+#space{
+    height: 0.9em;
+    width: auto;
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 200px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    border: none; /* Sin borde, ya que el borde rojo está en el popover */
+    padding: 0; /* Elimina rellenos para que quede pegado al borde */
+    margin: 0; /* Elimina márgenes */
+}
+
+
+.toggle{
+    background-color: #31363F;
+    height: 100%;
+    background: linear-gradient(to right, #222831, #6a6a70, #222831);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+.icon i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.forget-password:hover {
+    font-weight: bold;
+    color: #48676a; /* Cambia el color del texto */
+}
+#register-change-view{
+    display: none;
+}
+
+#login-change-view{
+    display: none;
+}
+@media (max-width: 1000px) {
+
+    #register-change-view{
+        display: block;
+    }
+
+    #login-change-view{
+        display: block;
+    }
+
+    #my-popover{
+        width: 800px;
+        height: 1000px;
+        overflow: hidden;
+    }
+
+    .container {
+        transform: scale(2);
+
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px #76ABAE, 0 0 20px #76ABAE, 0 0 30px #76ABAE, 0 0 40px #76ABAE; /* Neon effect */
+
+    }
+
+    .sign-in{
+        width: 50%;
+        left: 25%;
+    }
+
+    .sign-up{
+        width: 50%;
+        left: -25%;
+    }
+
+    .toggle-container{
+        display: none;
+    }
+
+
+}

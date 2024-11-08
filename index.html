@@ -3,17 +3,240 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/assets/logo.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/css/header-footer.css"/>
+
     <link rel="stylesheet" href="/css/index.css"/>
     <link href="style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/css/global.css"/>
-    <script src="/javascript/header-footer-loader.js"></script>
+    <script type="module" src="/javascript/header-footer-loader.js"></script>
+    <link href="./css/login.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/header-footer.css"/>
+    <script type="module" src="/javascript/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/javascript/index-controller.js"></script>
     <title>GastroHub</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
 </head>
 <body>
 <header id="navbar"></header>
 <section>
+<div id="hero">
+    <div class="rocket w-full">
+        <spline-viewer url="https://prod.spline.design/Fx6ixf1sjyGk0M4B/scene.splinecode"></spline-viewer>    </div>
+    <div id="hero-top">
+        <div id="left-top-hero">
+            <div class="tag">
+                <p class="number-one">Nº1</p>
+                <p>Number one in restaurant management solutions</p>
+            </div>
+            <h1>Simplify management, <br> <strong class="text-8xl">boost</strong> <strong>your restaurant</strong></h1>
+        </div>
+
+        <div id="right-top-hero">
+            <h2>Empower your restaurant to reach more customers and boost efficiency with the industry’s top management solution.</h2>
+            <div id="buttons">
+                <a href="/login" class="button">Buy now</a>
+                <div class="account-hero">
+                    <p>Have an account?</p>
+                    <a href="/account">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hero-bottom">
+        <spline-viewer loading-anim-type="none" url="https://prod.spline.design/i57fZTEsHriG48BQ/scene.splinecode"></spline-viewer>
+    </div>
+
+</div>
+
+    <div id="features">
+        <h2>Enjoy the unique features that set us apart, designed to elevate your restaurant's success.</h2>
+        <div id="first-feature">
+            <div class="left">
+                <p class="title">Transform Your Restaurant Space!</p>
+                <p class="text">With our app, you can intuitively design the restaurant layout, adapting the arrangement of tables and elements to suit your preferences. This complete customization will not only enhance the aesthetics of your establishment but also increase customer satisfaction, making them feel welcomed in a unique environment tailored to their needs.</p>
+            </div>
+            <div class="right">
+                <img src="./assets/index/feature-1.png">
+            </div>
+        </div>
+        <div id="second-features">
+            <div class="right feature">
+                <p class="title">Update Your Offerings in Real Time!</p>
+                <p class="text">We offer an interactive digital menu that customers can access from their mobile devices. Fully customizable and adaptable, it allows for immediate updates and the inclusion of specific dietary options, ensuring your clients always have access to the best selection. This innovative menu enhances the dining experience while allowing you to respond quickly to market trends.</p>
+                <img src="./assets/index/feature-2.jpg">
+            </div>
+            <div class="left feature">
+                <p class="title">Optimize Your Service Efficiency!</p>
+                <p class="text">Manage orders in real time with instant notifications to keep your team informed and responsive. Quickly update dish statuses to streamline workflow, boost efficiency, and elevate customer satisfaction.</p>
+                <img src="./assets/index/feature-3.jpg">
+            </div>
+        </div>
+        <div id="third-feature" class="feature">
+            <p class="title">Encourage Customer Loyalty with Rewards!</p>
+            <p class="text">Incentivize customer loyalty with our points system. As customers spend at the restaurant, they can accumulate points redeemable for attractive rewards. This initiative will not only enhance customer satisfaction but also encourage repeat visits, helping you build a loyal and engaged customer base.</p>
+            <img style="top:40%" src="./assets/index/feature-4.jpg">
+
+        </div>
+    </div>
+
+    <div id="prices">
+        <div class="price-bg absolute inset-x-0 -top-3 z-1 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+            <div class=" aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#EEEEEE] to-[#76ABAE] opacity-30"
+                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+        <div class="plan">
+            <div class="top">
+                <p class="tag">SMALL COMPANIES</p>
+                <p class="title">STANDARD</p>
+                <p class="feature">Servicio Carta</p>
+                <p class="feature">Servicio Carta</p>
+                <p class="feature">Servicio Carta</p>
+            </div>
+            <div class="bottom">
+                <div class="price">
+                    <p class="number">223,99 €</p>
+                    <p class="time">/month</p>
+                </div>
+                <a class="button">BUY NOW</a>
+            </div>
+        </div>
+        <div class="plan">
+            <div class="popular">MOST POPULAR</div>
+            <div class="top">
+                <p class="tag">MEDIUM COMPANIES</p>
+                <p class="title">PROFESIONAL</p>
+                <p class="feature">Servicio Carta</p>
+                <p class="feature">Servicio Carta</p>
+                <p class="feature">Servicio Carta</p>
+            </div>
+            <div class="bottom">
+                <div class="price">
+                    <p class="number">500,99 €</p>
+                    <p class="time">/month</p>
+                </div>
+                <a class="button">BUY NOW</a>
+            </div>
+        </div>
+        <div class="plan">
+            <div class="top">
+                <p class="tag">BIG COMPANIES</p>
+                <p class="title">PERSONALIZED</p>
+                <p class="feature">Select your custom features as you need</p>
+
+            </div>
+            <div class="bottom">
+                <div class="price">
+                    <p class="number">CUSTOM</p>
+                </div>
+                <a class="button">CONTACT NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="reviews">
+        <div class="carousel-container">
+            <div id="carousel-track" class="carousel-track">
+                <div class="review">
+                    <div class="image">
+                        <img src="./assets/index/restaurant1.webp">
+                    </div>
+                    <div class="info">
+                        <p class="stars">★★★★★</p>
+                        <p class="text">This restaurant management software has significantly streamlined our operations, enhancing both efficiency and customer service.</p>
+                        <p class="author">— Caliu, New York</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image">
+                        <img src="./assets/index/restaurant2.jpeg">
+                    </div>
+                    <div class="info">
+                        <p class="stars">★★★★★</p>
+                        <p class="text">Its user-friendly design made the transition easy for our staff, with minimal training required.</p>
+                        <p class="author">— Pizzeoto, Italia</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image">
+                        <img src="./assets/index/restaurant3.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="stars">★★★★★</p>
+                        <p class="text">Customer support is outstanding, providing quick and effective assistance whenever we encounter issues.</p>
+                        <p class="author">— Coffe Vitoria, España</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image">
+                        <img src="./assets/index/restaurant4.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="stars">★★★★★</p>
+                        <p class="text">The real-time inventory tracking feature has helped us reduce waste and optimize our purchasing.</p>
+                        <p class="author">— Chido, Argentina</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image">
+                        <img src="./assets/index/restaurant5.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="stars">★★★★★</p>
+                        <p class="text">Seamless integration with our POS system has minimized errors and simplified financial reporting.</p>
+                        <p class="author">— Amigos Kebab, Tortosa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div id="aboutus">
+        <div class="left">
+            <img src="./assets/index/businessman.png">
+        </div>
+        <div class="right">
+            <h2>This is <strong>GastroHub</strong></h2>
+            <p>GastroHub is your smart solution for restaurant management, boosting efficiency and customer satisfaction. Our platform reduces order errors and speeds up service, while an intuitive interface lets customers browse menus, customize orders, and track them in real time. Enjoy quick payments and a rewarding loyalty program, all with robust data security. Transform your restaurant experience with GastroHub today.</p>
+            <a>We are your best option!</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="contact-container">
+            <p class="tag">Don’t think any longer!</p>
+            <p class="title">Get Ready Now!</p>
+            <p class="text"><strong>Not sure where to start? </strong> Contact us, and our team will guide you through the process to get you on track quickly and easily!</p>
+            <a class="button">CONTACT US</a>
+        </div>
+    </div>
+
+    <div id="faq">
+        <div class="faq-item">
+            <div class="faq-question">What is GastroHub?</div>
+            <div class="faq-answer">GastroHub is an innovative restaurant management platform designed to streamline operations, enhance efficiency, and improve customer satisfaction through features like real-time order tracking and an intuitive interface.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How does GastroHub improve the dining experience?</div>
+            <div class="faq-answer">GastroHub enhances the dining experience by reducing order errors, enabling customers to customize their orders, and providing real-time updates on order status. It also offers quick payment options and a loyalty rewards program.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is my data secure with GastroHub?</div>
+            <div class="faq-answer">Yes, GastroHub prioritizes data security by implementing robust protocols to protect personal and financial information, ensuring a safe experience for all users.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I access GastroHub on different devices?</div>
+            <div class="faq-answer">Absolutely! GastroHub is designed to be responsive and can be accessed seamlessly across smartphones, tablets, and computers.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I join the loyalty rewards program?</div>
+            <div class="faq-answer">Customers automatically join the loyalty rewards program by placing orders through GastroHub. You’ll earn points for each order, which can be redeemed for exclusive rewards.</div>
+        </div>
+    </div>
+
+
 
 </section>
 <footer id="footer"></footer>
