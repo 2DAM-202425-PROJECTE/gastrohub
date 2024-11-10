@@ -403,19 +403,19 @@
 #reviews {
     background-color: black;
     padding-bottom: 100px;
+
     .carousel-container {
         overflow: hidden;
-        width: 90%;
+        width: 100%;
         margin: auto;
-
     }
-    
+
     .carousel-track {
         display: flex;
         gap: 25px;
         transition: transform 0.5s ease;
     }
-    
+
     .review {
         min-width: 32%;
         height: 300px;
@@ -429,45 +429,72 @@
         font-size: 2em;
         color: #333;
 
-        .image{
+        .image {
             width: 40%;
             height: 100%;
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
             background-color: #282c30;
             margin-right: 20px;
-            
-            img{
+
+            img {
                 height: 100%;
                 border-top-left-radius: 30px;
                 border-bottom-left-radius: 30px;
             }
         }
 
-        .info{
-            padding: 50px 20px 50px 20px;
+        .info {
+            padding: 50px 20px;
             width: 60%;
             height: 100%;
             display: flex;
             justify-content: space-between;
             flex-direction: column;
 
-            .stars{
+            .stars {
                 font-size: 20px;
                 color: gold;
             }
 
-            .text{
+            .text {
                 font-size: 10px;
                 font-weight: bold;
             }
 
-            .author{
+            .author {
                 font-size: 10px;
             }
         }
+    }
+}
 
+/* Estilos Responsivos */
+@media (max-width: 1200px) {
+    #reviews {
+        .carousel-container {
+            width: 640px; /* Ajusta el ancho al ancho de una reseña */
+        }
 
+        .review {
+            min-width: 640px; /* Ajusta el ancho al ancho de una reseña */
+        }
+    }
+
+    @media (max-width: 768px) {
+        #reviews {
+            .review {
+                min-width: 100%; /* Cada review ocupará el 100% del ancho en dispositivos móviles */
+            }
+
+            .info {
+                padding: 20px;
+
+                .text, .author {
+                    font-size: 12px; /* Ajusta el tamaño del texto en móviles */
+                }
+            }
+        }
     }
 }
 
@@ -815,5 +842,144 @@
         }
     }
 }
+
+
+
+.cards-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-end; /* Align the cards to the bottom */
+    flex-wrap: wrap;
+    background-color: black;
+    padding-bottom: 100px;
+}
+
+.card {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 320px;
+    height: 400px;
+    padding: 30px 10px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+    border-radius: 10px;
+    background-color: #6B6ECC;
+    background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:nth-child(2) {
+    width: 300px; /* Increase the width of the center card */
+    height: 450px; /* Increase the height of the center card */
+}
+
+.content {
+    padding: 20px;
+}
+
+.content .price {
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content .description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.content .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.64);
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(33 150 243);
+    border-radius: 0.5rem;
+    width: 70%; /* Change width to auto */
+    text-shadow: 0px 4px 18px #2c3442;
+}
+
+.popular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #ffffff, #7ec0c3); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1100px) {
+    .card {
+        width: 80%; /* Ajusta el ancho para centrado en móviles */
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 350px; /* Altura mínima fija que se adapta al contenido */
+        height: auto; /* Permite que la altura crezca con el contenido */
+        margin-bottom: 3%;
+    }
+
+    .card:nth-child(2) {
+        width: 90%;
+        min-height: 350px; /* Altura mínima para la carta central */
+    }
+
+
+    .content .price {
+        font-size: 50px;
+    }
+
+    .content .description {
+        font-size: 28px;
+    }
+
+    .content .title {
+        font-size: 50px;
+
+    }
+
+    .button {
+        font-size: 1.5rem;
+    }
+
+    .popular {
+        font-size: 30px;
+    }
+}
+
 
 
