@@ -8,6 +8,8 @@
 }
 
 
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -117,7 +119,7 @@
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 500px;
     border: 2px solid white;
 
 }
@@ -191,7 +193,7 @@ button:hover {
     background-color: #eee;
     border: none;
     margin: 8px 0;
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: 13px;
     border-radius: 8px;
     width: 100%;
@@ -267,7 +269,7 @@ button:hover {
     align-items: center;
     margin: 0 3px;
     width: 200px;
-    height: 40px;
+    height: 30px;
 }
 
 .toggle-container{
@@ -293,7 +295,7 @@ button:hover {
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 500px;
     border: none; /* Sin borde, ya que el borde rojo está en el popover */
     padding: 0; /* Elimina rellenos para que quede pegado al borde */
     margin: 0; /* Elimina márgenes */
@@ -389,7 +391,7 @@ button:hover {
 
     #my-popover{
         width: 800px;
-        height: 1000px;
+        height: 1100px;
         overflow: hidden;
     }
 
@@ -417,4 +419,9 @@ button:hover {
     }
 
 
+}
+.logo-login{
+    width: 100px !important;
+    height: 100px !important;
+    background-color: black;
 }

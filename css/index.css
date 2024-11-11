@@ -113,6 +113,7 @@
                     width: auto;
                     padding: 10px 25px;
                     font-weight: bold;
+                    color: black;
                 }
 
                 .account-hero{
@@ -605,9 +606,9 @@
         min-width: 400px;
         width: 32%;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .tag{
             color: white;
             font-size: 20px;
@@ -633,6 +634,7 @@
             border-radius: 30px;
             font-weight: bold;
             color: white;
+            width: 115px;
         }
     }
 }
