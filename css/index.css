@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: black;
+}
 #hero{
     position: relative;
     padding-top: 100px;
@@ -28,9 +32,11 @@
 
 
     .rocket{
+
         position: absolute;
-        clip-path: inset(0 575px 60px 0); /* top right bottom left */
+        clip-path: inset(0 0 60px 0); /* top right bottom left */
         overflow-x: hidden;
+
 
         spline-viewer{
             overflow-x: hidden;
@@ -108,12 +114,18 @@
 
 
                 .button{
+                    z-index: 1000;
                     background-color: white;
                     border-radius: 30px;
                     width: auto;
                     padding: 10px 25px;
                     font-weight: bold;
                     color: black;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .button:hover{
+                    transform: scale(1.1);
                 }
 
                 .account-hero{
@@ -545,6 +557,12 @@
             width: 250px;
             padding: 10px 20px;
             border-radius: 30px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        a:hover{
+            transform: scale(1.1);
         }
     }
 }
@@ -634,7 +652,13 @@
             border-radius: 30px;
             font-weight: bold;
             color: white;
-            width: 115px;
+            width: auto;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            transform: scale(1.1);
         }
     }
 }
@@ -642,6 +666,15 @@
 
 
 @media (prefers-color-scheme: light) {
+
+
+    .cards-container {
+        background-color: white !important;
+    }
+
+    body{
+        background-color: white;
+    }
     #hero{
         background-color: white;
 
@@ -722,6 +755,8 @@
     #prices{
         background-color: white;
     }
+
+
 
     #reviews{
         background-color: white;
