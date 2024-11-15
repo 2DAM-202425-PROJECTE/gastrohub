@@ -260,7 +260,6 @@ function loadNavbarFooter() {
 // Llamar a la función cuando la página esté cargada
 window.onload = loadNavbarFooter;
 
-
 // Crear y agregar dinámicamente el contenido HTML
 const body = document.getElementsByTagName('body')[0];
 
