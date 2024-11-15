@@ -281,14 +281,7 @@ const cookieHTML = `
 // Insertar el HTML antes de cerrar la etiqueta <body>
 body.insertAdjacentHTML('beforeend', cookieHTML);
 
-// Estilo CSS básico
-const style = document.createElement('style');
-style.textContent = `
-  .hidden {
-    display: none;
-  }
-`;
-document.head.appendChild(style);
+
 
 // Función para mostrar la alerta de cookies
 function showCookieAlert() {
