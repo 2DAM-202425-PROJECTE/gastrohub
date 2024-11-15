@@ -137,12 +137,13 @@ section{
     }
 
     .column-news{
-        margin-top: 50px;
 
         display: flex;
         flex-direction: column;
 
         .column-new{
+            margin-top: 50px;
+
             display: flex;
             width: 100%;
             justify-content: space-between;
