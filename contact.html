@@ -18,13 +18,13 @@
 </head>
 <body class="min-h-screen bg-white dark:bg-black">
 <header id="navbar"></header>
-<section class="min-h-screen pt-36">
-    <div class="pt-36 absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
-        <div class=" pt-36 aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#EEEEEE] to-[#76ABAE] opacity-30"
+<section class="min-h-screen">
+    <div id="contact-header" class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#76ABAE] to-[#48676a] opacity-30 mt-36"
              style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
         </div>
     </div>
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md ">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md mt-20">
         <h2 id="titol" class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
         <p id="phrase" class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
         <form id="contact-form" class="space-y-8">
@@ -39,8 +39,7 @@
             <div class="mb-4 relative">
                 <label for="country-code" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Country Code</label>
                 <div class="flex items-center">
-                    <input type="text" id="country-code" class="block p-3 ml-0 w-1/5 mr-5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Select country code" readonly required />
-                    <input type="tel" id="phone" pattern="\d{9}" class="block p-3 w-[calc(80%-1.25rem)] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your phone number" required>
+                    <input type="text" id="country-code" class="block p-3 ml-0 w-1/5 mr-5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light cursor-pointer" placeholder="Select country code" readonly required />                    <input type="tel" id="phone" pattern="\d{9}" class="block p-3 w-[calc(80%-1.25rem)] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your phone number" required>
                 </div>
                 <div class="relative z-10 hidden bg-pteal border border-gray-300 rounded-lg shadow-lg mt-1 max-h-40 overflow-y-auto" id="country-dropdown" style="margin-top: 10px;">
 
@@ -74,16 +73,13 @@
                 <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your message</label>
                 <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
             </div>
-            <div class="mt-4">
-                <button type="button" id="upload_widget" class="hidden bg-pteal hover:bg-pteal-dark py-3 px-5 text-sm font-medium text-center text-white rounded-lg sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 transform transition duration-300 hover:scale-105">Upload Files</button>            </div>
-            <div id="file-preview" class="mt-4"></div>
+
             <div class="mt-4">
                 <button type="submit" class="bg-pteal hover:bg-pteal-dark py-3 px-5 text-sm font-medium text-center text-white rounded-lg sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 transform transition duration-300 hover:scale-105">Send message</button>            </div>
         </form>
         <div id="form-messages" class="mt-4"></div>
     </div>
 </section>
-<footer id="footer"></footer>
 
 <script type="module">
     // Inicializa EmailJS
@@ -99,38 +95,6 @@
             return;
         }
     });
-
-    // Inicializa un array para almacenar las URLs de los archivos
-    let fileUrls = [];
-
-    // Configura el widget de Cloudinary
-    const myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dvqlqvleg', // Reemplaza con tu Cloud Name
-        uploadPreset: 'GastroHub', // Reemplaza con tu Upload Preset
-    }, (error, result) => {
-        if (!error && result && result.event === "success") {
-            const fileUrl = result.info.secure_url;
-            console.log('File URL:', fileUrl);
-            // Añade la URL al array de URLs de archivos
-            fileUrls.push(fileUrl);
-            // Habilita el botón de envío
-            document.querySelector('button[type="submit"]').disabled = false;
-
-            // Muestra la vista previa del archivo en forma de barra
-            const previewContainer = document.getElementById('file-preview');
-            const fileElement = document.createElement('div');
-            fileElement.className = 'file-item';
-            fileElement.innerHTML = `<span>${result.info.original_filename}</span> <a href="${fileUrl}" target="_blank">View</a>`;
-            previewContainer.appendChild(fileElement);
-        }
-    });
-
-    // Configura el botón para abrir el widget
-    document.getElementById("upload_widget").onclick = function () {
-        myWidget.open();
-        // Deshabilita el botón de envío hasta que el archivo se haya subido
-        document.querySelector('button[type="submit"]').disabled = true;
-    };
 
     // Maneja el envío del formulario
     document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -195,5 +159,6 @@
     document.addEventListener('DOMContentLoaded', updatePlaceholder);
     window.addEventListener('resize', updatePlaceholder);
 </script>
+<footer id="footer"></footer>
 </body>
 </html>
