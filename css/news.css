@@ -3,11 +3,11 @@ body{
 }
 
 section{
-  min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 200px;
 }
 
 .title{
@@ -19,12 +19,62 @@ section{
     background: -webkit-linear-gradient(#ffff, #5A595F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-bottom: 100px;
 }
 
 #top-news{
     width: 80%;
     height: 500px;
-    background-color: yellow;
+
+    .top-new{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 30px;
+
+        img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        img:hover{
+            filter: brightness(120%);
+            transform: scale(1.1);
+        }
+
+       .content{
+           padding: 30px;
+
+           position: absolute;
+           bottom: 0;
+           .date{
+               font-size: 1.2rem;
+               color: white;
+               text-shadow: black 0px 0px 10px;
+               font-weight: bold;
+
+               strong{
+                   color: #48676a;
+                   background-color: #76ABAE;
+                   padding: 5px;
+                   border-radius: 5px;
+                   text-shadow: none;
+               }
+           }
+
+           .text{
+               margin-top: 20px;
+               font-size: 2rem;
+               color: white;
+               font-weight: bold;
+               text-shadow: black 0px 0px 10px;
+           }
+       }
+    }
 
 }
 
@@ -48,20 +98,34 @@ section{
         .row-new{
             width: 30%;
 
+
             .date{
                 font-size: 1.2rem;
                 color: grey;
+                padding-bottom: 25px;
 
                 strong{
                     color: teal;
                 }
             }
 
-            img{
+            .img-div{
+                overflow: hidden;
                 border-radius: 10px;
-                width: 100%;
-                height: 200px;
+                img{
+
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 200px;
+                    transition: transform 0.3s ease, filter 0.3s ease;
+                }
+
+                img:hover{
+                    filter: brightness(120%);
+                    transform: scale(1.1);
+                }
             }
+
 
             .text{
                 margin-top: 20px;
@@ -113,11 +177,20 @@ section{
             }
 
             .right{
+                overflow: hidden;
+                border-radius: 10px;
+
                 width: 30%;
                 img{
                     border-radius: 10px;
                     width: 100%;
                     height: 200px;
+                    transition: transform 0.3s ease, filter 0.3s ease;
+                }
+
+                img:hover{
+                    filter: brightness(120%);
+                    transform: scale(1.1);
                 }
             }
         }

@@ -136,6 +136,14 @@ header{
             .logo-head {
                 width: 100px;
                 height: 100px;
+
+                p{
+                    display: none;
+                }
+
+                img{
+                    height: 100%;
+                }
             }
 
             .nav-head {

@@ -210,6 +210,8 @@ function loadNavbarFooter() {
                 <a href="/contact.html">Contact</a>
                 <a href="/privacy-policy.html">Privacy policy</a>
                 <a href="/about_us.html">About Us</a>
+                                <a href="/legal-info.html">Legal Information</a>
+
 </div>
 </div>
         </div>
@@ -251,7 +253,6 @@ function loadNavbarFooter() {
 
         window.scrollY > 0 ? navbar.classList.add("header-shadow") : navbar.classList.remove("header-shadow");
     });
-
 
 
 }
