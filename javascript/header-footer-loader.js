@@ -259,3 +259,83 @@ function loadNavbarFooter() {
 
 // Llamar a la función cuando la página esté cargada
 window.onload = loadNavbarFooter;
+
+// Crear y agregar dinámicamente el contenido HTML
+const body = document.getElementsByTagName('body')[0];
+
+// HTML a insertar
+const cookieHTML = `
+  <!-- Fons de la finestra de cookies -->
+  <div id="cookieBackdrop" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 z-50"></div>
+
+  <!-- Alerta de cookies -->
+  <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg z-50">
+    <p>El nostre lloc web utilitza cookies per millorar la seva experiència. Acepta les cookies per continuar navegant.</p>
+    <button id="acceptCookies" class="bg-green-500 text-white py-2 px-4 rounded">Acceptar</button>
+    <button id="rejectCookies" class="bg-red-500 text-white py-2 px-4 rounded">Rebutjar</button>
+    <a id="cookiePolicyLink" href="#" class="text-blue-500 underline ml-4">Més informació</a>
+  </div>
+  
+`;
+
+// Insertar el HTML antes de cerrar la etiqueta <body>
+body.insertAdjacentHTML('beforeend', cookieHTML);
+
+// Estilo CSS básico
+const style = document.createElement('style');
+style.textContent = `
+  .hidden {
+    display: none;
+  }
+`;
+document.head.appendChild(style);
+
+// Función para mostrar la alerta de cookies
+function showCookieAlert() {
+    const cookieAlert = document.getElementById('cookieAlert');
+    const cookieBackdrop = document.getElementById('cookieBackdrop');
+    cookieAlert.classList.remove('hidden');
+    cookieBackdrop.classList.remove('hidden'); // Mostra el fondo borroso
+}
+
+// Gestor de acontecimientos para aceptar cookies
+document.getElementById('acceptCookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true'); // Guarda la elección del usuario
+    document.getElementById('cookieAlert').classList.add('hidden');
+    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fodo
+    // Habilita cookies no esenciales si las aceptan
+    enableCookies();
+});
+
+// Gestor de acontecimientos para rechazar cookies
+document.getElementById('rejectCookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'false'); // Emmagatzema l'elecció de l'usuari
+    document.getElementById('cookieAlert').classList.add('hidden');
+    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fons
+    // Deshabilita cookies no essencials
+    disableCookies();
+});
+
+// Comprovamos si el usuario ya ha tomado una decisión sobre las cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+    showCookieAlert(); // Muestra la alerta si el usuario no ha aceptado ni rechazado
+} else {
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    if (cookiesAccepted === 'false') {
+        disableCookies(); // Desactivar cookies no esenciales si el usuario las rechazó
+    } else {
+        enableCookies(); // Habilitar cookies si las aceptó
+    }
+}
+
+// Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
+function enableCookies() {
+    console.log("Cookies aceptadas. Cargando cookies no esenciales...");
+    // Aquí podrías cargar otras funcionalidades como Analytics o publicidad si lo deseas
+}
+
+// Función para deshabilitar cookies no esenciales
+function disableCookies() {
+    console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
+    // No cargar ningún script adicional
+}
