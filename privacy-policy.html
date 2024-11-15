@@ -25,16 +25,51 @@
 
         @media (max-width: 1200px) {
             .relative h1 {
+                padding-top: 10%;
                 font-size: 4em;
-                line-height: 1.6; /* Ajusta aquest valor segons sigui necessari */
+                line-height: 1.6;
             }
+
             .relative p {
                 font-size: 2em;
-                line-height: 1.6; /* Ajusta aquest valor segons sigui necessari */
+                line-height: 1.6;
             }
+
             .relative li {
                 font-size: 1.6em;
-                line-height: 1.6; /* Ajusta aquest valor segons sigui necessari */
+                line-height: 1.6;
+            }
+        }
+
+        /* Regla general per a pantalles grans (ordinadors) */
+        @media (min-width: 1200px) {
+            .grid-cols-4 {
+                grid-template-columns: repeat(4, 1fr); /* 4 columnes en pantalles grans */
+            }
+        }
+
+        /* Regla per a pantalles petites (mòbils) */
+        @media (max-width: 1200px) {
+            /* Per a les taules que estan actualment a la segona secció */
+            #2, #3 {
+                display: block;  /* Els elements es mostren de manera vertical en pantalles petites */
+                width: 100%;  /* Es fa que els elements ocupin tot l'ample de la pantalla */
+                margin-bottom: 1.5rem; /* Afegim un espai entre els apartats per evitar que estiguin massa junts */
+                background: red;
+            }
+
+            /* També assegurem que la disposició dins de la taula es mantingui correcta */
+            .grid-cols-1, .grid-cols-4 {
+                display: block;  /* Els apartats de les taules seran mostrats un sota l'altre */
+                width: 100%; /* Els apartats ocuparan tot l'ample de la pantalla */
+            }
+
+            .text-xl {
+                font-size: 1.5rem; /* Ajustar les mides de font per a pantalles petites, si cal */
+            }
+
+            .space-y-2 {
+                margin-bottom: 0.5rem; /* Espai entre cada enllaç al menú de contingut */
             }
         }
 
