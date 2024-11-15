@@ -37,7 +37,7 @@ textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid; /* Reduce border width */
-    border-image: linear-gradient(to right, #373232, rgba(209,240,243,0.39) 80%, #76ABAE) 1; /* Predominantly gray with purple */
+    border-image: linear-gradient(to right, #373232, #48676a, #76ABAE) 1; /* Gradient with grey, dark grey, and light color */
     transition: all 0.3s ease-in-out;
 }
 
@@ -53,8 +53,8 @@ textarea:focus {
 /* Default dark mode styles */
 #country-dropdown {
     background: radial-gradient(circle at 20% 30%, #76ABAE, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(209,240,243,0.39), transparent 40%),
-    black; /* Dark gray background with smaller color spots */
+    radial-gradient(circle at 80% 70%, #48676a, transparent 40%),
+    #000000; /* Dark gray background */
     backdrop-filter: blur(15px); /* Increased blur effect */
     -webkit-backdrop-filter: blur(15px); /* Increased blur effect for WebKit browsers */
     color: #fff; /* Text color */
@@ -96,8 +96,8 @@ textarea:focus {
 @media (prefers-color-scheme: light) {
     #country-dropdown {
         background: radial-gradient(circle at 20% 30%, #76ABAE, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(209,240,243,0.39), transparent 40%),
-        white;  /* Softer white background */
+        radial-gradient(circle at 80% 70%, #48676a, transparent 40%),
+        #e0e0e0; /* Softer white background */
         backdrop-filter: blur(15px); /* Increased blur effect */
         -webkit-backdrop-filter: blur(15px); /* Increased blur effect for WebKit browsers */
         color: #000; /* Text color in light mode */
