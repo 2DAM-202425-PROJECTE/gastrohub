@@ -31,7 +31,7 @@ header{
                 height: 60px;
             }
             p{
-                color: white;
+                color: black;
                 font-weight: bold;
                 font-size: 20px;
             }
@@ -103,6 +103,10 @@ header{
 
             .logo-head img {
                 filter: invert(1) brightness(2);
+            }
+
+            .logo-head p {
+                color: white;
             }
 
             .nav-head{

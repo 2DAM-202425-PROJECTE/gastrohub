@@ -894,12 +894,17 @@ body{
 
     .card:nth-child(2) {
         width: 90%;
-        min-height: 350px; /* Altura mínima para la carta central */
+        min-height: 550px; /* Altura mínima para la carta central */
     }
 
 
     .content .price {
-        font-size: 50px;
+        font-size: 30px;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+        margin-bottom: 20px;
+        strong {
+            font-size: 60px;
+        }
     }
 
     .content .description {
