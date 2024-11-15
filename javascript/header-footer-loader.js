@@ -260,8 +260,7 @@ function loadNavbarFooter() {
 // Llamar a la función cuando la página esté cargada
 window.onload = loadNavbarFooter;
 
-<<<<<<< HEAD
-=======
+
 // Crear y agregar dinámicamente el contenido HTML
 const body = document.getElementsByTagName('body')[0];
 
@@ -388,4 +387,3 @@ function disableCookies() {
     console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
     // Aquí podrías asegurarte de no cargar ningún script adicional
 }
->>>>>>> 2ad0913ba79de655c667976933cca785fd288a27
