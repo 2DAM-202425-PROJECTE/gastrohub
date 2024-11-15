@@ -266,14 +266,27 @@ const body = document.getElementsByTagName('body')[0];
 // HTML a insertar
 const cookieHTML = `
   <!-- Fondo de la ventana de cookies -->
-  <div id="cookieBackdrop" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 z-50"></div>
+  <div id="cookieBackdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50" style="backdrop-filter: blur(4px)"></div>
 
   <!-- Alerta de cookies -->
-  <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg z-50">
-    <p>El nostre lloc web utilitza cookies per millorar la seva experiència. Acepta les cookies per continuar navegant.</p>
-    <button id="acceptCookies" class="bg-green-500 text-white py-2 px-4 rounded">Acceptar</button>
-    <button id="rejectCookies" class="bg-red-500 text-white py-2 px-4 rounded">Rebutjar</button>
-    <a id="cookiePolicyLink" href="#" class="text-blue-500 underline ml-4">Més informació</a>
+  <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg z-50">
+    <section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
+    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page.html" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
+    <div class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
+        <a href="cookie-page.html" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
+            More Information
+        </a>
+        <button id="acceptCookies" class=" text-xs bg-green-700 font-medium rounded-lg hover:bg-green-800 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Accept
+        </button>
+        <button id="rejectCookies" class=" text-xs bg-red-800 font-medium rounded-lg hover:bg-red-900 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Reject
+        </button>
+    </div>
+</section>
+    
+    
   </div>
 `;
 
