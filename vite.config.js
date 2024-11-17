@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/gastrohub/', // Reemplaza con el nombre de tu repositorio
+    base: '/', // Reemplaza con el nombre de tu repositorio
     build: {
         rollupOptions: {
             input: {
