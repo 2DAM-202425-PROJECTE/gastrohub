@@ -16,14 +16,14 @@ function loadNavbarFooter() {
                 <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="logo-head">
-            <a href="/index.html"><img src="public/assets/logoblack.png" alt="GastroHub"/></a>
+            <a href="/index.html"><img src="assets/logoblack.png" alt="GastroHub"/></a>
             <p>GASTROHUB</p>
         </div>
         <div class="w-[700px] h-full flex justify-evenly items-center hidden lg:flex lg:gap-x-12 text-pblack dark:text-pwhite font-bold">
-            <a class="hover:text-pteal" href="public/features.html">FEATURES</a>
-            <a class="hover:text-pteal" href="public/price.html">PRICE</a>
-            <a class="hover:text-pteal" href="public/news.html">NEWS</a>
-            <a class="hover:text-pteal" href="public/contact.html">CONTACT</a>
+            <a class="hover:text-pteal" href="features.html">FEATURES</a>
+            <a class="hover:text-pteal" href="price.html">PRICE</a>
+            <a class="hover:text-pteal" href="news.html">NEWS</a>
+            <a class="hover:text-pteal" href="contact.html">CONTACT</a>
         </div>
 
         <div id="right-head">
