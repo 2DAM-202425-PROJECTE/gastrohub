@@ -21,13 +21,13 @@ function loadNavbarFooter() {
         </div>
         <div class="w-[700px] h-full flex justify-evenly items-center hidden lg:flex lg:gap-x-12 text-pblack dark:text-pwhite font-bold">
             <a class="hover:text-pteal" href="features">FEATURES</a>
-            <a class="hover:text-pteal" href="price.html">PRICE</a>
-            <a class="hover:text-pteal" href="news.html">NEWS</a>
-            <a class="hover:text-pteal" href="contact.html">CONTACT</a>
+            <a class="hover:text-pteal" href="price">PRICE</a>
+            <a class="hover:text-pteal" href="news">NEWS</a>
+            <a class="hover:text-pteal" href="contact">CONTACT</a>
         </div>
 
         <div id="right-head">
-            <a href="/price.html" id="neon-btn"
+            <a href="/price" id="neon-btn"
                class="hidden lg:flex justify-center gap-2 items-center mx-auto shadow-lg text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 dark:border-pblack-light before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group dark:bg-pblack-light dark:text-pwhite">
                 Explore
                 <svg
@@ -143,19 +143,19 @@ function loadNavbarFooter() {
                     <div class="flex flex-col items-center justify-center h-full">
                         <div class="-my-6 divide-y divide-gray-500/10 w-full">
                             <div class="pt-16 pl-16 space-y-2 py-6 bt-3xl">
-                                <a href="/features.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">FEATURES</a>
-                                <a href="/price.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">PRICE</a>
-                                <a href="/news.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">NEWS</a>
-                                <a href="/contact.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">CONTACT</a>
+                                <a href="/features" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">FEATURES</a>
+                                <a href="/price" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">PRICE</a>
+                                <a href="/news" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">NEWS</a>
+                                <a href="/contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">CONTACT</a>
                             </div>
 <!--                            <div class="py-6 pl-16 border-t border-gray-500/10 flex">-->
-<!--                                <a href="./index.html#contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">Collaborate</a>-->
+<!--                                <a href="./index#contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">Collaborate</a>-->
 <!--                            </div>-->
                         </div>
                     </div>
                 </div>
                 <div class="fixed inset-x-0 bottom-80">
-                    <a href="/price.html"
+                    <a href="/price"
                        class="w-1/2 h-24 flex justify-center gap-2 items-center mx-auto shadow-lg text-5xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 dark:border-pblack-light relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group dark:bg-pblack-light dark:text-pwhite">
                         Explore
                         <svg
@@ -201,16 +201,16 @@ function loadNavbarFooter() {
             <div class="urls-footer">
             <div>
                 <a href="/">Home</a>
-                <a href="/features.html">Features</a>
-                <a href="/price.html">Price</a>
-                <a href="/news.html">News</a>
+                <a href="/features">Features</a>
+                <a href="/price">Price</a>
+                <a href="/news">News</a>
 
             </div>
             <div>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy-policy.html">Privacy policy</a>
-                <a href="/about_us.html">About Us</a>
-                                <a href="/legal-info.html">Legal Information</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy policy</a>
+                <a href="/about_us">About Us</a>
+                                <a href="/legal-info">Legal Information</a>
 
 </div>
 </div>
@@ -272,9 +272,9 @@ const cookieHTML = `
   <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg z-50">
     <section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
-    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page.html" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
     <div class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
-        <a href="cookie-page.html" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
+        <a href="cookie-page" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
             More Information
         </a>
         <button id="acceptCookies" class=" text-xs bg-green-700 font-medium rounded-lg hover:bg-green-800 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
