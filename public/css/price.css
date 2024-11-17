@@ -1,0 +1,5 @@
+.title-price {
+    background: -webkit-linear-gradient(#ffff, #5A595F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

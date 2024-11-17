@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png"/>
+    <link rel="stylesheet" href="/css/contact.css"/>
+    <link href="../style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/global.css"/>
+    <script type="module" src="/javascript/header-footer-loader.js"></script>
+    <link href="css/login.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/header-footer.css"/>
+    <script type="module" src="/javascript/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/javascript/index-controller.js"></script>
+    <title>GastroHub | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="min-h-screen bg-white dark:bg-black">
+<header id="navbar"></header>
+<section class="min-h-screen">
+    <div id="contact-header" class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#76ABAE] to-[#48676a] opacity-30 mt-36"
+             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md mt-20">
+        <h2 id="titol" class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+        <p id="phrase" class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+        <form id="contact-form" class="space-y-8">
+            <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
+            </div>
+            <div>
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+            </div>
+            <div class="mb-4 relative">
+                <label for="country-code" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Country Code</label>
+                <div class="flex items-center">
+                    <input type="text" id="country-code" class="block p-3 ml-0 w-1/5 mr-5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light cursor-pointer" placeholder="Select country code" readonly required />                    <input type="tel" id="phone" pattern="\d{9}" class="block p-3 w-[calc(80%-1.25rem)] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your phone number" required>
+                </div>
+                <div class="relative z-10 hidden bg-pteal border border-gray-300 rounded-lg shadow-lg mt-1 max-h-40 overflow-y-auto" id="country-dropdown" style="margin-top: 10px;">
+
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+1" onclick="selectCountry('+1 (USA)')">🇺🇸 +1 (US)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+1" onclick="selectCountry('+1 (Canada)')">🇨🇦 +1 (CA)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+7" onclick="selectCountry('+7 (Russia)')">🇷🇺 +7 (RU)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+33" onclick="selectCountry('+33 (France)')">🇫🇷 +33 (FR)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+34" onclick="selectCountry('+34 (Spain)')">🇪🇸 +34 (ES)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+39" onclick="selectCountry('+39 (Italy)')">🇮🇹 +39 (IT)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+44" onclick="selectCountry('+44 (UK)')">🇬🇧 +44 (GB)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+45" onclick="selectCountry('+45 (Denmark)')">🇩🇰 +45 (DK)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+46" onclick="selectCountry('+46 (Sweden)')">🇸🇪 +46 (SE)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+47" onclick="selectCountry('+47 (Norway)')">🇳🇴 +47 (NO)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+49" onclick="selectCountry('+49 (Germany)')">🇩🇪 +49 (DE)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+52" onclick="selectCountry('+52 (Mexico)')">🇲🇽 +52 (MX)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+54" onclick="selectCountry('+54 (Argentina)')">🇦🇷 +54 (AR)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+55" onclick="selectCountry('+55 (Brazil)')">🇧🇷 +55 (BR)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+56" onclick="selectCountry('+56 (Chile)')">🇨🇱 +56 (CL)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+57" onclick="selectCountry('+57 (Colombia)')">🇨🇴 +57 (CO)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+61" onclick="selectCountry('+61 (Australia)')">🇦🇺 +61 (AU)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+64" onclick="selectCountry('+64 (New Zealand)')">🇳🇿 +64 (NZ)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+65" onclick="selectCountry('+65 (Singapore)')">🇸🇬 +65 (SG)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+81" onclick="selectCountry('+81 (Japan)')">🇯🇵 +81 (JP)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+86" onclick="selectCountry('+86 (China)')">🇨🇳 +86 (CN)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+91" onclick="selectCountry('+91 (India)')">🇮🇳 +91 (IN)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+506" onclick="selectCountry('+506 (Costa Rica)')">🇨🇷 +506 (CR)</div>
+                    <div class="cursor-pointer p-2 hover:bg-pteal-light" data-value="+598" onclick="selectCountry('+598 (Uruguay)')">🇺🇾 +598 (UY)</div>
+                </div>
+            </div>
+            <div class="sm:col-span-2">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your message</label>
+                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." required></textarea>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="bg-pteal hover:bg-pteal-dark py-3 px-5 text-sm font-medium text-center text-white rounded-lg sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 transform transition duration-300 hover:scale-105">Send message</button>            </div>
+        </form>
+        <div id="form-messages" class="mt-4"></div>
+    </div>
+</section>
+
+<script type="module">
+    // Inicializa EmailJS
+    (function () {
+        emailjs.init('_W3Zv2n0xStmfdhOQ'); // Reemplaza con tu ID de usuario de EmailJS
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        const phoneInput = document.getElementById('phone');
+        if (!phoneInput.checkValidity()) {
+            event.preventDefault();
+            document.getElementById('form-messages').innerHTML = '<p class="text-red-500">El número de teléfono debe tener exactamente 9 dígitos.</p>';
+            return;
+        }
+    });
+
+    // Maneja el envío del formulario
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío normal del formulario
+
+        const emailContent = {
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+            phone: document.getElementById('phone').value, // Agrega teléfono
+            regionPrefix: document.getElementById('country-code').value,
+            fileUrls: fileUrls.join(', ') // Concatena las URLs en una sola cadena
+        };
+
+        // Envía el correo electrónico
+        emailjs.send('service_uu8xekq', 'template_hcvyu63', emailContent)
+            .then(function (response) {
+                document.getElementById('form-messages').innerHTML = '<p class="text-green-500">¡Correo enviado exitosamente!</p>';
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('contact-form').reset(); // Limpiar campos del formulario
+                document.getElementById('file-preview').innerHTML = ''; // Limpiar la vista previa de archivos
+                fileUrls = []; // Limpiar el array de URLs de archivos
+            }, function (error) {
+                document.getElementById('form-messages').innerHTML = '<p class="text-red-500">No se pudo enviar el mensaje. Intenta de nuevo.</p>';
+                console.log('FAILED...', error);
+            });
+    });
+
+    // Funciones para seleccionar país y actualizar el campo de código de país
+    window.selectCountry = function (countryCode) {
+        document.getElementById('country-code').value = countryCode;
+        document.getElementById('country-dropdown').classList.add('hidden');
+    }
+
+    // Mostrar dropdown al hacer clic en el campo del código de país
+    document.getElementById('country-code').addEventListener('click', function() {
+        const dropdown = document.getElementById('country-dropdown');
+        dropdown.classList.toggle('hidden');
+        if (!dropdown.classList.contains('hidden')) {
+            dropdown.scrollTop = 0; // Desplazar al inicio
+        }
+    });
+
+    // Ocultar dropdown al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('country-dropdown');
+        if (!dropdown.contains(event.target) && event.target.id !== 'country-code') {
+            dropdown.classList.add('hidden');
+        }
+    });
+
+    function updatePlaceholder() {
+        const countryCodeInput = document.getElementById('country-code');
+        if (window.innerWidth <= 1000) {
+            countryCodeInput.placeholder = 'Country';
+        } else {
+            countryCodeInput.placeholder = 'Select country code';
+        }
+    }
+
+    // Llama a la función al cargar la página y al redimensionar la ventana
+    document.addEventListener('DOMContentLoaded', updatePlaceholder);
+    window.addEventListener('resize', updatePlaceholder);
+</script>
+<footer id="footer"></footer>
+</body>
+</html>
