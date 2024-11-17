@@ -358,4 +358,40 @@ footer{
             }
         }
     }
+
+    #cookieAlert {
+        position: fixed;
+        top: 25%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+
+        #cookieSection {
+            width: 700px;
+            height: 270px;
+            #cookieTitle {
+                font-size: 50px;
+            }
+            #cookieText {
+                font-size: 25px;
+                line-height: normal;
+            }
+            #cookieButtons {
+                padding-top: 15px;
+
+                #cookiePolicyLink {
+                    font-size: 20px;
+                }
+                #acceptCookies {
+                    font-size: 20px;
+
+                }
+                #rejectCookies {
+                    font-size: 20px;
+
+                }
+            }
+        }
+    }
 }
+
