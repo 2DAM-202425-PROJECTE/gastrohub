@@ -1,6 +1,6 @@
-import Alpine from 'alpinejs'
-window.Alpine = Alpine
-Alpine.start()
+import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/module.esm.js';
+window.Alpine = Alpine;
+Alpine.start();
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const loader = document.getElementById('loading');
