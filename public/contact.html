@@ -84,7 +84,7 @@
 <script type="module">
     // Inicializa EmailJS
     (function () {
-        emailjs.init('_W3Zv2n0xStmfdhOQ'); // Reemplaza con tu ID de usuario de EmailJS
+        emailjs.init('PZvbs8_32ks1j-7O9'); // Reemplaza con tu ID de usuario de EmailJS
     })();
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -106,11 +106,10 @@
             message: document.getElementById('message').value,
             phone: document.getElementById('phone').value, // Agrega teléfono
             regionPrefix: document.getElementById('country-code').value,
-            fileUrls: fileUrls.join(', ') // Concatena las URLs en una sola cadena
         };
 
         // Envía el correo electrónico
-        emailjs.send('service_uu8xekq', 'template_hcvyu63', emailContent)
+        emailjs.send('service_2jka16e', 'template_bpxnmmn', emailContent)
             .then(function (response) {
                 document.getElementById('form-messages').innerHTML = '<p class="text-green-500">¡Correo enviado exitosamente!</p>';
                 console.log('SUCCESS!', response.status, response.text);
