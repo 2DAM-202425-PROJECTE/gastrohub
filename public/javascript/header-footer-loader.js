@@ -42,7 +42,7 @@ function loadNavbarFooter() {
                 </svg>
             </a>
             <button id="popover-usr" popovertarget="my-popover">
-                <img id="account-img" src="assets/header/account.png">
+                <img alt="Account button icon" id="account-img" src="assets/header/account.png">
             </button>
             <div class="flex lg:hidden ml-12">
                 <button type="button"
@@ -60,7 +60,7 @@ function loadNavbarFooter() {
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form class="bg-white flex items-center justify-center flex-col px-10 h-full">
-                            <img class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.png">
                             <h1>Create Account</h1>
                             <div class="social-icons">
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
@@ -90,7 +90,7 @@ function loadNavbarFooter() {
                     </div>
                     <div class="form-container sign-in">
                         <form>
-                            <img class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.png">
                             <h1>Log In</h1>
                             <div class="social-icons">
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
@@ -180,18 +180,18 @@ function loadNavbarFooter() {
     <footer>
     <div class="top-footer">
         <div class="info-footer">
-            <img src="assets/logo.png" alt="logo">
+            <img  src="assets/logo.png" alt="GastroHub logo">
             <p>GastroHub</p>
             <p class="title-footer">Social Media</p>
             <div class="social-links-footer">
                 <div class="social-media">
-                    <a href="https://x.com/GastroHubApp"><img src="./assets/footer/twitter.png"></a>
+                    <a href="https://x.com/GastroHubApp"><img alt="X logo" src="./assets/footer/twitter.png"></a>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img src="./assets/footer/facebook.png"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img alt="Facebook logo" src="./assets/footer/facebook.png"></a>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.instagram.com/gastrohubapp/"><img src="./assets/footer/instagram.webp"></a>
+                    <a href="https://www.instagram.com/gastrohubapp/"><img alt="Instagram logo" src="./assets/footer/instagram.webp"></a>
                 </div>
                 
             </div>
