@@ -358,4 +358,62 @@ footer{
             }
         }
     }
+
+    #cookie {
+        position: fixed;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        #cookieTitle {
+            font-size: 50px;
+        }
+
+        #cookieText {
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+        #cookieButtons {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        #cookieButtons {
+
+            #acceptCookies {
+                width: 30%;
+                font-size: 40px;
+                height: 70px;
+                border-radius: 15px;
+            }
+            #rejectCookies {
+                width: 30%;
+                font-size: 40px;
+                height: 70px;
+                border-radius: 15px;
+            }
+            #acceptCookies:hover {
+                transform: scale(1.1);
+            }
+            #rejectCookies:hover {
+                transform: scale(1.1);
+
+
+            }
+        }
+
+        #cookiePolicyLink {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+    }
+
+
+
 }

@@ -270,10 +270,10 @@ const cookieHTML = `
 
   <!-- Alerta de cookies -->
   <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg z-50">
-    <section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
-    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
-    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
-    <div class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
+    <section id="cookie" class="fixed p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
+    <h2 id="cookieTitle" class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
+    <p id="cookieText" class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
+    <div id="cookieButtons" class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
         <a href="cookie-page" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
             More Information
         </a>
