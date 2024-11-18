@@ -185,14 +185,15 @@ function loadNavbarFooter() {
             <p class="title-footer">Social Media</p>
             <div class="social-links-footer">
                 <div class="social-media">
-                    <img src="./assets/footer/twitter.png">
+                    <a href="https://x.com/GastroHubApp"><img src="./assets/footer/twitter.png"></a>
                 </div>
                 <div class="social-media">
-                    <img src="./assets/footer/facebook.png">
+                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img src="./assets/footer/facebook.png"></a>
                 </div>
                 <div class="social-media">
-                    <img src="./assets/footer/linkedin.png">
+                    <a href="https://www.instagram.com/gastrohubapp/"><img src="./assets/footer/instagram.webp"></a>
                 </div>
+                
             </div>
         </div>
         <div class="links-footer">
