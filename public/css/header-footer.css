@@ -294,8 +294,9 @@ footer{
                 border: none;
                 margin: 0;
                 vertical-align: middle;
+                color: white;
             }
-            .subscribe-form button {
+            .subscribe-form .button {
                 height: 50px;
                 width: 20%;
                 border: none;
@@ -306,7 +307,6 @@ footer{
                 background-image: url("../assets/footer/send.png");
                 background-repeat: no-repeat;
                 background-position: center;
-
             }
 
 
