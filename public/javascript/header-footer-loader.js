@@ -220,9 +220,9 @@ function loadNavbarFooter() {
             <p class="title-footer">Subscribe</p>
             <div class="line-footer"></div>
             <div class="subscribe-form">
-                <form action="#">
-                    <input type="text" placeholder="Email Address">
-                    <button></button>
+                <form action="https://acumbamail.com/newform/subscribe/HY8HybITdaUPmviDOva6jF3vsWvnMmdklMvCPOCrjkZ/51455/" method="post">
+                    <input placeholder="Email Address" id="r0c0m1i1" name="email_1" type="email" required="">
+                    <input class="button" type="submit" value="">
                 </form>
             </div>
         </div>

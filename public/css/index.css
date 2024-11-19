@@ -147,17 +147,31 @@ body{
         }
     }
     #hero-bottom{
-        margin-left: 300px;
-        width: 80%;
+        padding: 0 200px;
+        width: 100%;
         height: calc(55% - 100px);
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
         overflow-x: hidden;
 
         spline-viewer{
             padding-right: 20px;
             width: 58%;
             clip-path: inset(0 200px 0 0); /* top right bottom left */
+            height: 100%;
+
+        }
+
+        img:nth-child(1){
+            height: 100%;
+
+            filter: opacity(0.8);
+            margin: 0px;
+            mask-image: linear-gradient(to left, transparent, black);
+            box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3); /* Desenfoque del borde */
+        }
+
+        img:nth-child(2){
             height: 100%;
 
         }
