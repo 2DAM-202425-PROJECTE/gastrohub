@@ -206,26 +206,27 @@ section{
         background: -webkit-linear-gradient(#000000, #8f8f95);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        
+    }
 
-        #news {
-            #row-news {
-                .row-new {
+    #news {
+        #row-news {
+            .row-new {
+                .text {
+                    color: black;
+                }
+            }
+        }
+
+        .column-news {
+            .column-new {
+                .left {
                     .text {
                         color: black;
                     }
                 }
             }
-
-            .column-news {
-                .column-new {
-                    .left {
-                        .text {
-                            color: black;
-                        }
-                    }
-                }
-            }
-
         }
+
     }
 }
