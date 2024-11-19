@@ -11,11 +11,7 @@ section{
 }
 
 .title{
-    width: 100%;
-    text-align: center;
-    font-size: 2.3rem;
-    font-weight: bold;
-    margin-top: 20px;
+
     background: -webkit-linear-gradient(#ffff, #5A595F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -204,5 +200,10 @@ section{
 @media (prefers-color-scheme: light) {
     body{
         background-color: white;
+    }
+    .title{
+        background: -webkit-linear-gradient(#000000, #8f8f95);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
