@@ -205,4 +205,24 @@ section{
     body{
         background-color: white;
     }
+
+    #news{
+        #row-news{
+            .row-new{
+                .text{
+                    color: black;
+                }
+            }
+        }
+
+        .column-news{
+            .column-new{
+                .left{
+                    .text{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
 }
