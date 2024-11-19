@@ -367,14 +367,22 @@ if (!checkCookie('cookiesAccepted')) {
 
 // Función para gestionar el SSID
 function manageSSID() {
-    if (!checkCookie('ssid') && getCookie('cookiesAccepted') === 'true') {
-        const ssid = generateSSID(); // Genera un SSID único
-        setCookie('ssid', ssid, 7); // Guarda el SSID en una cookie durante 1 año
-        console.log('SSID generado y guardado:', ssid);
-    } else if (getCookie('cookiesAccepted') === 'false') {
-        console.log('El SSID no se guarda ya que las cookies fueron rechazadas');
+    if (getCookie('cookiesAccepted') === 'true') {
+        const existingSSID = getCookie('ssid');
+        const newSSID = generateSSID(); // Genera un nuevo SSID único
+
+        if (existingSSID) {
+            console.log('SSID anterior eliminado:', existingSSID);
+        }
+
+        // Actualiza la cookie con el nuevo SSID
+        setCookie('ssid', newSSID, 7); // Guarda el SSID durante 7 días
+        console.log('SSID generado y actualizado:', newSSID);
+    } else {
+        console.log('El SSID no se actualiza ya que las cookies fueron rechazadas');
     }
 }
+
 
 // Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
 function enableCookies() {

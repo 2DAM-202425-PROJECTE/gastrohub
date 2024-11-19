@@ -1,3 +1,9 @@
+.title-price {
+    background: -webkit-linear-gradient(#d5d5d5, #5A595F) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -159,5 +165,13 @@ section{
             }
 
         }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .title-price{
+        background: -webkit-linear-gradient(#000000, #8f8f95);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
