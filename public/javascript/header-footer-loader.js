@@ -333,22 +333,22 @@ function showCookieAlert() {
     cookieBackdrop.classList.remove('hidden'); // Muestra el fondo borroso
 }
 
-// Gestor de eventos para aceptar cookies
+// Gestor d'events per a aceptar cookies
 document.getElementById('acceptCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durante 1 año
+    setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durant 7 dies
     console.log('Cookies aceptadas');
     document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fondo
+    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fons
     enableCookies();
-    manageSSID(); // Generar y guardar el SSID solo si se aceptan las cookies
+    manageSSID(); // Generar y guardar l'SSID només si s'accepten les cookies
 });
 
-// Gestor de eventos para rechazar cookies
+// Gestor d'events per rebutjar cookies
 document.getElementById('rejectCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 1 año
+    setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 7 dies
     console.log('Cookies rechazadas');
     document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fondo
+    document.getElementById('cookieBackdrop').classList.add('hidden'); // Ocultar el fons
     disableCookies();
 });
 
@@ -365,18 +365,18 @@ if (!checkCookie('cookiesAccepted')) {
     }
 }
 
-// Función para gestionar el SSID
+// Funció per a gestionar SSID
 function manageSSID() {
     if (getCookie('cookiesAccepted') === 'true') {
         const existingSSID = getCookie('ssid');
-        const newSSID = generateSSID(); // Genera un nuevo SSID único
+        const newSSID = generateSSID(); // Genera un nou SSID únic
 
         if (existingSSID) {
             console.log('SSID anterior eliminado:', existingSSID);
         }
 
         // Actualiza la cookie con el nuevo SSID
-        setCookie('ssid', newSSID, 7); // Guarda el SSID durante 7 días
+        setCookie('ssid', newSSID, 7); // Guarda SSID durant 7 díes
         console.log('SSID generado y actualizado:', newSSID);
     } else {
         console.log('El SSID no se actualiza ya que las cookies fueron rechazadas');
