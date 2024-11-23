@@ -8,6 +8,213 @@ body{
     background-color: black;
 }
 
+.header {
+    padding-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+
+    background: radial-gradient(
+            ellipse at -20% 60%,
+            rgba(118, 171, 174, 0.4), /* Color con opacidad */
+            rgba(0, 0, 0, 0) 40%
+    ),
+
+    radial-gradient(
+            circle at 100% 30%,
+            rgba(72, 103, 106, 0.4), /* Color con opacidad */
+            rgba(0, 0, 0, 0) 30%
+    );
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.header__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .header__left {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.header__left img {
+    width: 70%;
+    height: auto;
+    border-radius: 35px;
+    margin-top: 75px;
+
+    filter: opacity(0.8);
+    mask-image: linear-gradient(to left, transparent, black);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3); /* Desenfoque del borde */
+
+}
+
+@media (max-width: 992px) {
+    .header__left img {
+        width: 70%;
+    }
+}
+
+.header__tag {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+    border-radius: 30px;
+    gap: 15px;
+    align-items: center;
+    padding-left: 10px;
+    height: 35px;
+    width: 450px;
+}
+
+@media (max-width: 992px) {
+    .header__tag {
+        flex-direction: column;
+        height: 100%;
+        width: 45%;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin-top: 100px;
+    }
+}
+
+.header__tag--number {
+    width: 50px;
+    height: 25px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c30;
+    color: white;
+    border-radius: 30px;
+}
+
+@media (max-width: 992px) {
+    .header__tag--number {
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .header__tag p {
+        text-align: center;
+    }
+}
+
+.header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 90px;
+    width: 20%;
+}
+
+@media (max-width: 992px) {
+    .header__right {
+        margin-top: 100px;
+        width: 80%;
+        align-items: center;
+    }
+}
+
+.header__logo {
+    margin: 100px auto 0 auto;
+    width: 80%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .header__logo {
+        margin: 10px;
+        width: 50%;
+    }
+}
+
+.header__title {
+    font-size: 65px;
+    font-weight: 700;
+    color: #333;
+    background: -webkit-linear-gradient(#ffff, #5A595F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+    .header__title {
+        text-align: center;
+        font-size: 50px;
+    }
+}
+
+.header__title--boost {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+@media (max-width: 992px) {
+    .header__title--boost {
+        font-size: 80px;
+    }
+}
+
+.header__text {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .header__text {
+        text-align: center;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.header__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    height: 37px;
+    padding: 10px 25px;
+    font-weight: 900;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    user-select: none;
+}
+
+.header__btn:hover {
+    transform: scale(1.1);
+}
+
+/*dsadadasdadasdadadasdadas*/
 #hero{
     position: relative;
     padding-top: 100px;
@@ -22,7 +229,7 @@ body{
         rgba(118, 171, 174, 0.4), /* Color con opacidad */
         rgba(0, 0, 0, 0) 40%
     ),
-    
+
     radial-gradient(
         circle at 100% 30%,
         rgba(72, 103, 106, 0.4), /* Color con opacidad */
