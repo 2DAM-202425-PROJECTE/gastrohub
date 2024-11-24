@@ -36,6 +36,22 @@ body{
     }
 }
 
+@media (prefers-color-scheme: light) {
+    .header {
+        background: radial-gradient(
+                ellipse at 120% 60%,
+                rgba(137, 246, 255, 0.28), /* Color con opacidad */
+                rgba(0, 0, 0, 0) 40%
+        ),
+
+        radial-gradient(
+                circle at 100% 30%,
+                rgba(72, 103, 106, 0.4), /* Color con opacidad */
+                rgba(0, 0, 0, 0) 30%
+        );
+    }
+}
+
 .header__left {
     display: flex;
     flex-direction: column;
@@ -828,29 +844,45 @@ body{
     body{
         background-color: white;
     }
-    #hero{
-        background-color: white;
 
-        #hero-top{    
-            #left-top-hero{
-                .tag{
-                    background-color: black;
-                    .number-one{
-                        background-color: #505457;
-                        color: white;
-                    }
-                    p{
-                        color: white;
-                    }
-                }
-    
-                h1{
-                    background: -webkit-linear-gradient(#000000, #5A595F);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-    
+    .header {
+        background-color: white;
+    }
+
+    .header__left--tag {
+        background-color: black;
+    }
+
+    .header__tag {
+        background-color: #222831;
+    }
+
+    .header__tag--number {
+        background-color: #505457;
+        color: white;
+    }
+
+    .header__tag--text {
+        color: white;
+    }
+
+    .header__title {
+        background: -webkit-linear-gradient(#000000, #5A595F);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .header__text {
+        color: black;
+    }
+
+    .header__btn {
+        background-color: #222831;
+        color: white;
+    }
+
+
+
             #right-top-hero{
     
                 h2{
@@ -874,8 +906,8 @@ body{
                     }
                 }
             }
-        }
-    }
+
+
 
     #features{
         background-color: white;
