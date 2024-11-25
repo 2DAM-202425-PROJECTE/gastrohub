@@ -154,6 +154,12 @@
     -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
 
+@media (max-width: 992px) {
+    .game-section .item-desc p, .game-section .item-desc h3 {
+        font-size: 40px;
+    }
+}
+
 .game-section .item.active .item-desc p {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -218,12 +224,28 @@
         width: 240px;
         height: 330px;
     }
+
+    @media (max-width: 992px) {
+        .game-section .item {
+            margin: 0 12px 60px;
+            width: 600px;
+            height: 750px;
+        }
+    }
     .game-section .item.active {
         width: 360px;
     }
+
+
     .game-section .item-desc {
         transform: translateY(calc(100% - 42px));
         -webkit-transform: translateY(calc(100% - 42px));
+    }
+}
+
+@media (max-width: 992px) {
+    .game-section .item.active {
+        width: 900px;
     }
 }
 
