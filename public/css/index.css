@@ -99,10 +99,9 @@ body{
 
 @media (max-width: 992px) {
     .header__tag {
-        flex-direction: column;
-        height: 100%;
-        width: 45%;
-        justify-content: center;
+        height: 50px;
+        width: 70%;
+        justify-content: space-evenly;
         align-items: center;
         gap: 0;
         margin-top: 100px;
@@ -112,7 +111,7 @@ body{
 .header__tag--number {
     width: 50px;
     height: 25px;
-    font-weight: 700;
+    font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +122,9 @@ body{
 
 @media (max-width: 992px) {
     .header__tag--number {
-        width: 50%;
+        font-size: 25px;
+        width: 100px;
+        height: 40px;
         margin-bottom: 0;
     }
 }
@@ -131,6 +132,7 @@ body{
 @media (max-width: 992px) {
     .header__tag p {
         text-align: center;
+        font-size: 23px;
     }
 }
 
@@ -145,7 +147,7 @@ body{
 @media (max-width: 992px) {
     .header__right {
         margin-top: 100px;
-        width: 80%;
+        width: 90%;
         align-items: center;
     }
 }
@@ -177,7 +179,7 @@ body{
 @media (max-width: 992px) {
     .header__title {
         text-align: center;
-        font-size: 50px;
+        font-size: 120px;
     }
 }
 
@@ -188,7 +190,7 @@ body{
 
 @media (max-width: 992px) {
     .header__title--boost {
-        font-size: 80px;
+        font-size: 140px;
     }
 }
 
@@ -203,8 +205,9 @@ body{
 @media (max-width: 992px) {
     .header__text {
         text-align: center;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 40px;
+        line-height: 50px;
+
     }
 }
 
@@ -227,6 +230,15 @@ body{
 
 .header__btn:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .header__btn {
+        font-size: 25px;
+        height: 75px;
+        padding: 20px 50px;
+        margin-bottom: 100px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -264,6 +276,13 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 992px) {
+    .features__title {
+        width: 90%;
+        font-size: 60px;
+    }
+}
+
 @media (prefers-color-scheme: light) {
     .features__title {
         background: -webkit-linear-gradient(#000000, #5A595F);
@@ -292,7 +311,7 @@ body{
 @media (max-width: 992px) {
     .features__info--title {
         text-align: center;
-        font-size: 24px;
+        font-size: 45px;
     }
 }
 
@@ -310,7 +329,7 @@ body{
 
 @media (max-width: 992px) {
     .features__info--text {
-        font-size: 20px;
+        font-size: 40px;
     }
 }
 
@@ -333,13 +352,14 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        width: 70%;
+        width: 90%;
     }
 }
 
 .features__img {
     width: 100%; /* Ajusta este valor según sea necesario */
     height: auto;
+    margin-bottom: 150px;
 }
 
 .features__img img {
@@ -377,7 +397,7 @@ body{
 
 @media (max-width: 992px) {
     .features__second {
-        width: 60%;
+        width: 80%;
         margin-bottom: 20px;
     }
 }
@@ -401,7 +421,7 @@ body{
 
 @media (max-width: 992px) {
     .features__third {
-        width: 60%;
+        width: 80%;
         margin-bottom: 40px;
     }
 }
@@ -426,79 +446,7 @@ body{
 
 @media (max-width: 992px) {
     .features__fourth {
-        width: 60%;
-    }
-}
-
-
-
-
-#reviews {
-    background-color: black;
-    padding-bottom: 100px;
-
-    .carousel-container {
-        overflow: hidden;
-        width: 100%;
-        margin: auto;
-    }
-
-    .carousel-track {
-        display: flex;
-        gap: 25px;
-        transition: transform 0.5s ease;
-    }
-
-    .review {
-        min-width: 32%;
-        height: 300px;
-        border-radius: 30px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        margin: 10px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        font-size: 2em;
-        color: #333;
-
-        .image {
-            width: 40%;
-            height: 100%;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            background-color: #282c30;
-            margin-right: 20px;
-
-            img {
-                height: 100%;
-                border-top-left-radius: 30px;
-                border-bottom-left-radius: 30px;
-            }
-        }
-
-        .info {
-            padding: 50px 20px;
-            width: 60%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-
-            .stars {
-                font-size: 20px;
-                color: gold;
-            }
-
-            .text {
-                font-size: 10px;
-                font-weight: bold;
-            }
-
-            .author {
-                font-size: 10px;
-            }
-        }
+        width: 80%;
     }
 }
 
@@ -509,35 +457,6 @@ body{
             rgba(137, 246, 255, 0.3), /* Color con opacidad */
             rgba(0, 0, 0, 0) 40%
         );
-    }
-}
-
-/* Estilos Responsivos */
-@media (max-width: 1200px) {
-    #reviews {
-        .carousel-container {
-            width: 640px; /* Ajusta el ancho al ancho de una reseña */
-        }
-
-        .review {
-            min-width: 640px; /* Ajusta el ancho al ancho de una reseña */
-        }
-    }
-
-    @media (max-width: 768px) {
-        #reviews {
-            .review {
-                min-width: 100%; /* Cada review ocupará el 100% del ancho en dispositivos móviles */
-            }
-
-            .info {
-                padding: 20px;
-
-                .text, .author {
-                    font-size: 12px; /* Ajusta el tamaño del texto en móviles */
-                }
-            }
-        }
     }
 }
 
@@ -598,6 +517,26 @@ body{
     }
 }
 
+@media (max-width: 992px) {
+    #aboutus {
+        padding-top: 0;
+    }
+
+    #aboutus .right h2{
+        font-size: 50px;
+    }
+
+    #aboutus .right p{
+        text-align: justify;
+        font-size: 30px;
+    }
+
+    #aboutus .right a{
+        font-size: 30px;
+        width: 80%;
+        padding: 20px 40px;
+    }
+}
 
 #faq{
     padding: 100px 0px;
@@ -641,6 +580,8 @@ body{
     }
     
 }
+
+
 
 #contact{
     padding: 50px 0px;
@@ -693,6 +634,14 @@ body{
         }
     }
 }
+/*No va ---------------------------------------------------------------------------*/
+@media (max-width: 992px) {
+    .contact-container {
+        width: 80%;
+    }
+}
+/*---------------------------------------------------------------------------------------*/
+
 @media (prefers-color-scheme: light) {
     #aboutus {
         background: radial-gradient(
@@ -825,7 +774,7 @@ body{
             h2{
                 color: black;
             }
-    
+
             p{
                 color: black;
             }
@@ -874,9 +823,6 @@ body{
             align-items: center;
             padding-bottom: 100px;
             width: 75%;
-            p{
-                text-align: center;
-            }
         }
         .left{
             width: 80%;
@@ -1104,43 +1050,43 @@ body{
 
 @media (max-width: 992px) {
     .card {
-        width: 60%; /* Ajusta el ancho para centrado en móviles */
+        width: 80%; /* Ajusta el ancho para centrado en móviles */
         margin-left: auto;
         margin-right: auto;
-        min-height: 600px; /* Altura mínima fija que se adapta al contenido */
+        min-height: 800px; /* Altura mínima fija que se adapta al contenido */
         height: auto; /* Permite que la altura crezca con el contenido */
         margin-bottom: 3%;
     }
 
     .card:nth-child(2) {
-        width: 60%;
-        min-height: 600px; /* Altura mínima para la carta central */
+        width: 80%;
+        min-height: 800px; /* Altura mínima para la carta central */
         order: -1; /* Hace que el segundo hijo se muestre primero */
     }
 
     .content .price {
-        font-size: 30px;
+        font-size: 50px;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
         margin-bottom: 20px;
     }
 
     .content .price strong {
-        font-size: 60px;
+        font-size: 80px;
     }
 
     .content .description {
-        font-size: 28px;
+        font-size: 40px;
     }
 
     .content .title {
-        font-size: 50px;
+        font-size: 80px;
     }
 
     .button {
-        font-size: 1.5rem;
+        font-size: 40px;
     }
 
     .popular {
-        font-size: 30px;
+        font-size: 50px;
     }
 }

@@ -24,8 +24,9 @@ $(document).ready(function () {
         startPosition: 0, // Establecer "Dota 2" como el primer item
         onInitialized: function () {
             setActiveItem();
-        }
+        },
     });
+
 
     // Función para establecer el item activo
     function setActiveItem() {

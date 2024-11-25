@@ -1,4 +1,10 @@
 /* Estilos para la vista previa de los archivos */
+@media (max-width: 992px) {
+    section {
+        padding-top: 100px;
+    }
+}
+
 #file-preview {
     display: flex;
     flex-direction: column;
