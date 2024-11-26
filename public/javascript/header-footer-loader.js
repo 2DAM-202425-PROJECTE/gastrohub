@@ -46,7 +46,7 @@ function loadNavbarFooter() {
             </button>
             <div class="flex lg:hidden ml-12">
                 <button type="button"
-                        class="-m-1 inline-flex items-center justify-center rounded-md p-2 text-pwhite"
+                        class="-m-1 inline-flex items-center justify-center rounded-md p-2 dark:text-pwhite text-black"
                         @click="menuOpen = true">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -132,7 +132,7 @@ function loadNavbarFooter() {
         <div class="bg-white dark:bg-black w-full h-1/2 overflow-y-auto px-6 py-6 flex justify-center pointer-events-auto">
             <div class="w-full">
                 <div class="flex items-center justify-between mt-24 mr-7">
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-pwhite ml-auto" @click="menuOpen = false">
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 dark:text-pwhite text-black ml-auto" @click="menuOpen = false">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -180,7 +180,7 @@ function loadNavbarFooter() {
     <footer>
     <div class="top-footer">
         <div class="info-footer">
-            <img  src="assets/logo.png" alt="GastroHub logo">
+            <img class="logo-gastro" src="assets/logo.png" alt="GastroHub logo">
             <p>GastroHub</p>
             <p class="title-footer">Social Media</p>
             <div class="social-links-footer">

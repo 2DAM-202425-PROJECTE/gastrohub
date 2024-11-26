@@ -581,6 +581,19 @@ body{
     
 }
 
+@media (max-width: 992px) {
+    #faq .faq-item {
+        width: 90%;
+    }
+
+    #faq .faq-question {
+        font-size: 30px;
+    }
+
+    #faq .faq-answer {
+        font-size: 25px;
+    }
+}
 
 
 #contact{
@@ -636,8 +649,22 @@ body{
 }
 /*No va ---------------------------------------------------------------------------*/
 @media (max-width: 992px) {
-    .contact-container {
-        width: 80%;
+    #contact {
+        .contact-container {
+            width: 80%;
+            .tag {
+                font-size: 30px;
+            }
+            .title {
+                font-size: 60px;
+            }
+            .text {
+                font-size: 30px;
+            }
+            .button {
+                font-size: 30px;
+            }
+        }
     }
 }
 /*---------------------------------------------------------------------------------------*/
