@@ -11,3 +11,44 @@
             -webkit-text-fill-color: transparent;
         }
 }
+
+.first-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+    }
+}
+
+.second-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+    }
+}
+
+.third-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+    }
+}
+#tier-enterprise {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+#tier-hobby {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+#tier-hobby-2 {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+.text-price {
+    @media (max-width: 992px) {
+        font-size: 100px;
+    }
+}
