@@ -28,19 +28,70 @@
     h1{
       font-size: 3.9rem;
       font-weight: bold;
+      margin-top: 20px;
       background: -webkit-linear-gradient(#ffff, #5A595F);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .background-section {
+    .background-section1 {
       background: radial-gradient(
-              ellipse at 120% 75%,
+              ellipse at 120% 40%,
               rgba(118, 171, 174, 0.4),
               rgba(0, 0, 0, 0) 30%
       );
     }
+    .background-section2 {
+      background: radial-gradient(
+              ellipse at -5% 81%,
+              rgba(118, 171, 174, 0.4),
+              rgba(0, 0, 0, 0) 20%
+      );
+    }
     .w-full.bg-cover.bg-center.bg-no-repeat {
-      padding-top: 20px; /* Reduce this value to move the whole section up */
+      padding-top: 20px; /* Redueix aquest valor per moure tota la secció amunt */
+    }
+    .padding{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .menu-container {
+      position: sticky;
+      top: 28px; /* L'espai des de la part superior del viewport */
+      height: fit-content; /* Permet que l'alçada s'ajusti automàticament */
+      align-self: start; /* Manté la posició a dalt en pantalles grans */
+    }
+    @media (max-width: 992px) {
+
+      .menu-container {
+        display: none;
+        background-color: red;
+      }
+      body {
+        font-size: 1.2rem; /* Augmenta la mida del text a 1.2rem */
+
+      }
+      h2, h5, h3{
+        font-size: 50px !important;
+      }
+      section {
+        p, li, a { /* Assegura't que altres elements textuals s'ajustin */
+          font-size: 38px !important; ;
+
+        }
+      }
+    }
+    #titol{
+      padding-top: 60px;
+
+    }
+    p{
+      line-height: 42px !important;
+      text-align: justify !important;
+    }
+    h2, h3{
+      line-height: 40px !important;
+      padding-top : 30px;
+      padding-bottom: 30px;
     }
   </style>
 
@@ -58,16 +109,15 @@
     <div class="padding">
       <div class="w-full">
         <div class="w-full bg-cover bg-center bg-no-repeat lg:pt-44 pt-28 lg:pb-24 pb-14 px-12 xl:px-20">
-          <h1 class="mb-8 text-center text-gray-900 dark:text-white font-bold font-manrope leading-tight text-8xl">Cookies Policy</h1>
+          <h1 id="titol" class="mb-8 text-center text-gray-900 dark:text-white font-bold font-manrope leading-tight text-8xl">Cookies Policy</h1>
           <p class="text-content text-gray-700 dark:text-pwhite text-xl leading-8 text-center font-normal px-4">
             This page explains the use of cookies on our website to enhance user experience and offer personalized services.
           </p>
         </div>
-
         <section class="w-full relative overflow-hidden lg:py-28 py-16">
           <div class="text-content px-12 xl:px-20">
             <div class="flex flex-col md:flex-row w-full gap-8">
-              <div class="w-full md:max-w-[176px] md:border-r md:border-gray-200 sticky top-0">
+              <div class="menu-container w-full md:max-w-[176px] md:border-r md:border-gray-200 sticky top-0">
                 <ul class="tab-nav flex flex-col md:items-start items-center lg:gap-10 gap-6">
                   <li><a href="#01" class="font-medium text-xl leading-7 text-gray-900 dark:text-pteal hover:font-bold">What are cookies?</a></li>
                   <li><a href="#02" class="font-medium text-xl leading-7 text-gray-900 dark:text-pteal hover:font-bold">Types of cookies used</a></li>
@@ -78,38 +128,38 @@
 
               <div class="w-full tab-pane max-md:px-4">
                 <h2 class="font-manrope font-bold lg:text-4xl text-gray-900 dark:text-pteal mb-5">Details of the Cookies Policy</h2>
-                <div class="text-content flex flex-col ml-8 gap-10 list-outside list-decimal font-manrope font-bold text-3xl">
-                  <div id="01">
-                    <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">What are cookies?</h3>
-                    <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
-                      Cookies are small text files that websites store on the user's browser to improve their browsing experience. They allow the site to remember information about the user's visit, such as selected preferences, previously visited navigation items, and even login credentials for easier access in future visits. Cookies play a crucial role in ensuring the efficient functioning of the website and providing a more personalized experience. Additionally, these cookies may be temporary, disappearing when the browser is closed, or permanent, remaining on the user's device for a specified period.
-                    </p>
-                  </div>
-                  <div id="02">
-                    <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">Types of cookies used</h3>
-                    <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
-                      On our website, we use several categories of cookies to provide an optimal service:
-                      <br><strong>Essential cookies:</strong> These are crucial for the basic operation of the website, ensuring that essential elements like navigation or access to secure features function properly.
-                      <br><strong>Analytics cookies:</strong> These cookies collect anonymous data on how users interact with the website, such as which pages are visited most often, which sections are less consulted, or the time spent on each page. This information helps us improve the content and structure of the site.
-                      <br><strong>Customization cookies:</strong> These cookies remember personal preferences like the selected language, the user's region, or visual settings, providing a more consistent and convenient browsing experience.
-                    </p>
-                  </div>
-                  <div id="03">
-                    <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">How to manage cookies?</h3>
-                    <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
-                      Cookie management can be done through the browser settings. Users have the option to allow, block, or delete cookies according to their preferences. This setting may vary depending on the browser used, but it can generally be accessed through the "Settings" or "Preferences" section. It is important to note that disabling some cookies may negatively impact the browsing experience, preventing access to certain features or making content personalization more difficult. We recommend reviewing and adjusting the settings periodically to ensure they meet your needs.
-                    </p>
-                  </div>
-                  <div id="04">
-                    <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">More information</h3>
-                    <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
-                      If you would like more details about our Cookie Policy, feel free to contact us via email at info@gastrohub.com. You can also refer to external resources, such as official browser support sites, to better understand how to manage cookies effectively. Our team is committed to providing transparency and support so you can have full control over your browsing experience.
-                    </p>
-                  </div>
+
+                <div id="01">
+                  <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">What are cookies?</h3>
+                  <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
+                    Cookies are small text files that websites store on the user's browser to improve their browsing experience. They allow the site to remember information about the user's visit, such as selected preferences, previously visited navigation items, and even login credentials for easier access in future visits. Cookies play a crucial role in ensuring the efficient functioning of the website and providing a more personalized experience. Additionally, these cookies may be temporary, disappearing when the browser is closed, or permanent, remaining on the user's device for a specified period.
+                  </p>
+                </div>
+                <div id="02">
+                  <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">Types of cookies used</h3>
+                  <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
+                    On our website, we use several categories of cookies to provide an optimal service:
+                    <br><strong>Essential cookies:</strong> These are crucial for the basic operation of the website, ensuring that essential elements like navigation or access to secure features function properly.
+                    <br><strong>Analytics cookies:</strong> These cookies collect anonymous data on how users interact with the website, such as which pages are visited most often, which sections are less consulted, or the time spent on each page. This information helps us improve the content and structure of the site.
+                    <br><strong>Customization cookies:</strong> These cookies remember personal preferences like the selected language, the user's region, or visual settings, providing a more consistent and convenient browsing experience.
+                  </p>
+                </div>
+                <div id="03">
+                  <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">How to manage cookies?</h3>
+                  <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
+                    Cookie management can be done through the browser settings. Users have the option to allow, block, or delete cookies according to their preferences. This setting may vary depending on the browser used, but it can generally be accessed through the "Settings" or "Preferences" section. It is important to note that disabling some cookies may negatively impact the browsing experience, preventing access to certain features or making content personalization more difficult. We recommend reviewing and adjusting the settings periodically to ensure they meet your needs.
+                  </p>
+                </div>
+                <div id="04">
+                  <h3 class="font-manrope font-bold text-2xl text-gray-900 dark:text-pteal">More information</h3>
+                  <p class="font-normal text-xl leading-8 text-gray-700 dark:text-pwhite">
+                    If you would like more details about our Cookie Policy, feel free to contact us via email at info@gastrohub.com. You can also refer to external resources, such as official browser support sites, to better understand how to manage cookies effectively. Our team is committed to providing transparency and support so you can have full control over your browsing experience.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+
         </section>
       </div>
     </div>

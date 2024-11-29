@@ -1,13 +1,25 @@
 /* Estilos para la vista previa de los archivos */
-@media (max-width: 992px) {
-    section {
-        padding-top: 100px;
-    }
-}
-
 #file-preview {
     display: flex;
     flex-direction: column;
+}
+#country-code {
+    max-width: fit-content; /* Ajusta el ancho al contenido */
+    width: 100%; /* Asegura que tome el ancho completo disponible */
+    margin-right: 1rem; /* Agrega un margen inferior */
+    overflow-y: auto;
+    max-height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid; /* Reduce border width */
+    border-image: linear-gradient(to right, #373232, #48676a, #76ABAE) 1; /* Gradient with grey, dark grey, and light color */
+    transition: all 0.3s ease-in-out;
+    color: #9fa7ba; /* Color gris para el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+}
+
+::placeholder{
+    color: #6b7280; /* Color gris para el texto */
 }
 
 .file-item {
@@ -172,5 +184,17 @@ textarea:focus {
         justify-content: center; /* Center the text horizontally */
         align-items: center; /* Center the text vertically */
         border-radius: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    #country-code {
+        max-width: 175px; /* Adjust the width to be smaller */
+        height: 100px; /* Adjust the height */
+        font-size: 1.5em; /* Adjust the font size */
+        display: flex;
+        justify-content: center; /* Center the text horizontally */
+        align-items: center; /* Center the text vertically */
+        border-radius: 10px; /* Adjust the border radius */
+        margin-right: 1rem; /* Add a right margin */
     }
 }
