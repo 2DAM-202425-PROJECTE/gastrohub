@@ -60,7 +60,7 @@ function loadNavbarFooter() {
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form class="bg-white flex items-center justify-center flex-col px-10 h-full">
-                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Create Account</h1>
                             <div class="social-icons">
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
@@ -90,7 +90,7 @@ function loadNavbarFooter() {
                     </div>
                     <div class="form-container sign-in">
                         <form>
-                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Log In</h1>
                             <div class="social-icons">
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
