@@ -16,7 +16,7 @@ function loadNavbarFooter() {
                 <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="logo-head">
-            <a href="/"><img src="assets/logoblack.png" alt="GastroHub"/></a>
+            <a href="/"><img src="assets/logoblack.webp" alt="GastroHub"/></a>
             <a href="/"><p>GASTROHUB</p></a>
         </div>
         <div class="w-[700px] h-full flex justify-evenly items-center hidden lg:flex lg:gap-x-12 text-pblack dark:text-pwhite font-bold">
@@ -42,7 +42,7 @@ function loadNavbarFooter() {
                 </svg>
             </a>
             <button id="popover-usr" popovertarget="my-popover">
-                <img alt="Account button icon" id="account-img" src="assets/header/account.png">
+                <img alt="Account button icon" id="account-img" src="assets/header/account.webp">
             </button>
             <div class="flex lg:hidden ml-12">
                 <button type="button"
@@ -180,15 +180,15 @@ function loadNavbarFooter() {
     <footer>
     <div class="top-footer">
         <div class="info-footer">
-            <img class="logo-gastro" src="assets/logo.png" alt="GastroHub logo">
+            <img class="logo-gastro" src="assets/logo.webp" alt="GastroHub logo">
             <p>GastroHub</p>
             <p class="title-footer">Social Media</p>
             <div class="social-links-footer">
                 <div class="social-media">
-                    <a href="https://x.com/GastroHubApp"><img alt="X logo" src="./assets/footer/twitter.png"></a>
+                    <a href="https://x.com/GastroHubApp"><img alt="X logo" src="./assets/footer/twitter.webp"></a>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img alt="Facebook logo" src="./assets/footer/facebook.png"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img alt="Facebook logo" src="./assets/footer/facebook.webp"></a>
                 </div>
                 <div class="social-media">
                     <a href="https://www.instagram.com/gastrohubapp/"><img alt="Instagram logo" src="./assets/footer/instagram.webp"></a>
