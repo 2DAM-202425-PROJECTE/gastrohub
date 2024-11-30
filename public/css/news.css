@@ -230,3 +230,18 @@ section{
 
     }
 }
+
+@media (max-width: 992px) {
+    #news{
+        #row-news{
+            flex-direction: column;
+            gap: 20px;
+
+            .row-new{
+                width: 100%;
+            }
+        }
+
+        
+    }
+}
