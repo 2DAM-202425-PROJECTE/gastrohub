@@ -255,6 +255,8 @@ function loadNavbarFooter() {
         window.scrollY > 0 ? navbar.classList.add("header-shadow") : navbar.classList.remove("header-shadow");
     });
 
+    console.log('Navbar and footer loaded successfully.');
+
 
 }
 
@@ -292,106 +294,110 @@ const cookieHTML = `
 `;
 
 // Insertar el HTML antes de cerrar la etiqueta <body>
-body.insertAdjacentHTML('beforeend', cookieHTML);
 
-// Función para establecer una cookie
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Expira en X días
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
+if (window.location.pathname !== '/cookie-page' && window.location.pathname !== '/cookie-page.html') {
+    body.insertAdjacentHTML('beforeend', cookieHTML);
 
-// Función para obtener el valor de una cookie
-function getCookie(name) {
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookies = decodedCookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let c = cookies[i].trim();
-        if (c.indexOf(name + "=") === 0) {
-            return c.substring(name.length + 1);
+    // Función para establecer una cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Expira en X días
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Función para obtener el valor de una cookie
+    function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let c = cookies[i].trim();
+            if (c.indexOf(name + "=") === 0) {
+                return c.substring(name.length + 1);
+            }
+        }
+        return null;
+    }
+
+    // Función para verificar la existencia de una cookie
+    function checkCookie(name) {
+        return getCookie(name) !== null;
+    }
+
+    // Función para generar un identificador único (SSID simulado)
+    function generateSSID() {
+        return 'SSID-' + Math.random().toString(36).substring(2, 15) + Date.now();
+    }
+
+    // Función para mostrar la alerta de cookies
+    function showCookieAlert() {
+        const cookieAlert = document.getElementById('cookieAlert');
+        const cookieBackdrop = document.getElementById('cookieBackdrop');
+        cookieAlert.classList.remove('hidden');
+        cookieBackdrop.classList.remove('hidden'); // Muestra el fondo borroso
+    }
+
+    // Gestor d'events per a aceptar cookies
+    document.getElementById('acceptCookies').addEventListener('click', function () {
+        setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durant 7 dies
+        console.log('Cookies aceptadas');
+        document.getElementById('cookieAlert').classList.add('hidden');
+        document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fons
+        enableCookies();
+        manageSSID(); // Generar y guardar l'SSID només si s'accepten les cookies
+    });
+
+    // Gestor d'events per rebutjar cookies
+    document.getElementById('rejectCookies').addEventListener('click', function () {
+        setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 7 dies
+        console.log('Cookies rechazadas');
+        document.getElementById('cookieAlert').classList.add('hidden');
+        document.getElementById('cookieBackdrop').classList.add('hidden'); // Ocultar el fons
+        disableCookies();
+    });
+
+    // Comprueba si el usuario ya ha tomado una decisión sobre las cookies
+    if (!checkCookie('cookiesAccepted')) {
+        showCookieAlert(); // Muestra la alerta si no hay cookie guardada
+    } else {
+        const cookiesAccepted = getCookie('cookiesAccepted');
+        if (cookiesAccepted === 'false') {
+            disableCookies(); // Desactivar cookies no esenciales si el usuario las rechazó
+        } else {
+            enableCookies(); // Habilitar cookies si las aceptó
+            manageSSID(); // Generar y guardar el SSID solo si las cookies fueron aceptadas
         }
     }
-    return null;
-}
 
-// Función para verificar la existencia de una cookie
-function checkCookie(name) {
-    return getCookie(name) !== null;
-}
+    // Funció per a gestionar SSID
+    function manageSSID() {
+        if (getCookie('cookiesAccepted') === 'true') {
+            const existingSSID = getCookie('ssid');
+            const newSSID = generateSSID(); // Genera un nou SSID únic
 
-// Función para generar un identificador único (SSID simulado)
-function generateSSID() {
-    return 'SSID-' + Math.random().toString(36).substring(2, 15) + Date.now();
-}
+            if (existingSSID) {
+                console.log('SSID anterior eliminado:', existingSSID);
+            }
 
-// Función para mostrar la alerta de cookies
-function showCookieAlert() {
-    const cookieAlert = document.getElementById('cookieAlert');
-    const cookieBackdrop = document.getElementById('cookieBackdrop');
-    cookieAlert.classList.remove('hidden');
-    cookieBackdrop.classList.remove('hidden'); // Muestra el fondo borroso
-}
-
-// Gestor d'events per a aceptar cookies
-document.getElementById('acceptCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durant 7 dies
-    console.log('Cookies aceptadas');
-    document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fons
-    enableCookies();
-    manageSSID(); // Generar y guardar l'SSID només si s'accepten les cookies
-});
-
-// Gestor d'events per rebutjar cookies
-document.getElementById('rejectCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 7 dies
-    console.log('Cookies rechazadas');
-    document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Ocultar el fons
-    disableCookies();
-});
-
-// Comprueba si el usuario ya ha tomado una decisión sobre las cookies
-if (!checkCookie('cookiesAccepted')) {
-    showCookieAlert(); // Muestra la alerta si no hay cookie guardada
-} else {
-    const cookiesAccepted = getCookie('cookiesAccepted');
-    if (cookiesAccepted === 'false') {
-        disableCookies(); // Desactivar cookies no esenciales si el usuario las rechazó
-    } else {
-        enableCookies(); // Habilitar cookies si las aceptó
-        manageSSID(); // Generar y guardar el SSID solo si las cookies fueron aceptadas
-    }
-}
-
-// Funció per a gestionar SSID
-function manageSSID() {
-    if (getCookie('cookiesAccepted') === 'true') {
-        const existingSSID = getCookie('ssid');
-        const newSSID = generateSSID(); // Genera un nou SSID únic
-
-        if (existingSSID) {
-            console.log('SSID anterior eliminado:', existingSSID);
+            // Actualiza la cookie con el nuevo SSID
+            setCookie('ssid', newSSID, 7); // Guarda SSID durant 7 díes
+            console.log('SSID generado y actualizado:', newSSID);
+        } else {
+            console.log('El SSID no se actualiza ya que las cookies fueron rechazadas');
         }
+    }
 
-        // Actualiza la cookie con el nuevo SSID
-        setCookie('ssid', newSSID, 7); // Guarda SSID durant 7 díes
-        console.log('SSID generado y actualizado:', newSSID);
-    } else {
-        console.log('El SSID no se actualiza ya que las cookies fueron rechazadas');
+
+    // Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
+    function enableCookies() {
+        console.log("Cookies aceptadas. Cargando cookies no esenciales...");
+        // Aquí podrías cargar otras funcionalidades como Analytics o publicidad si lo deseas
+    }
+
+    // Función para deshabilitar cookies no esenciales
+    function disableCookies() {
+        console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
+        // Aquí podrías asegurarte de no cargar ningún script adicional
     }
 }
 
-
-// Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
-function enableCookies() {
-    console.log("Cookies aceptadas. Cargando cookies no esenciales...");
-    // Aquí podrías cargar otras funcionalidades como Analytics o publicidad si lo deseas
-}
-
-// Función para deshabilitar cookies no esenciales
-function disableCookies() {
-    console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
-    // Aquí podrías asegurarte de no cargar ningún script adicional
-}
