@@ -3,7 +3,8 @@ const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 const loginChangeView = document.getElementById('login-change-view');
 const registerChangeView = document.getElementById('register-change-view');
-
+const loginSuccesButton = document.getElementById('login-succes-button');
+const registerSuccesButton = document.getElementById('signUpBtn');
 
 if (registerBtn && loginBtn) {
     registerBtn.addEventListener('click', () => {
@@ -20,6 +21,24 @@ if (registerBtn && loginBtn) {
 
     registerChangeView.addEventListener('click', () => {
         container.classList.remove("active");
+    });
+}
+
+if (loginSuccesButton && registerSuccesButton) {
+    loginSuccesButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('password').value;
+
+        if(email !== '' && password !== '') {
+            localStorage.setItem('user', JSON.stringify({ email, password, image: null, name: email }));
+            window.location.href = '/profile';
+        }
+    });
+
+    registerSuccesButton.addEventListener('click', (event) => {
+        event.preventDefault();
     });
 }
 
@@ -67,5 +86,16 @@ document.getElementById('signUpBtn').addEventListener('click', function (event) 
     } else {
         document.getElementById('password2').style.borderColor = '';
         passwordError.textContent = '';
+    }
+
+    if (password1 === password2) {
+        const name = document.getElementById('register-name').value;
+        const email = document.getElementById('register-email').value;
+        const password = document.getElementById('password1').value;
+
+        if(name !== '' && email !== '' && password !== '') {
+            localStorage.setItem('user', JSON.stringify({ email, password, image: null, name }));
+            window.location.href = '/profile';
+        }
     }
 });

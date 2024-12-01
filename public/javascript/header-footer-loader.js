@@ -41,7 +41,7 @@ function loadNavbarFooter() {
                     ></path>
                 </svg>
             </a>
-            <button id="popover-usr" popovertarget="my-popover">
+            <button id="popover-usr" >
                 <img alt="Account button icon" id="account-img" src="assets/header/account.webp">
             </button>
             <div class="flex lg:hidden ml-12">
@@ -66,8 +66,8 @@ function loadNavbarFooter() {
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
                             </div>
                             <span>or use your email for registeration</span>
-                            <input type="text" placeholder="Name" required>
-                            <input type="email" placeholder="Email" required>
+                            <input type="text" placeholder="Name" id="register-name" required>
+                            <input type="email" placeholder="Email" id="register-email"  required>
                             <div class="password-container">
                                 <input type="password" id="password1" placeholder="Password" required>
                                 <button type="button" id="togglePassword1" class="eye-button">
@@ -96,7 +96,7 @@ function loadNavbarFooter() {
                                 <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
                             </div>
                             <span>or use your email and password</span>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" placeholder="Email" id="login-email" required>
                             <div class="password-container">
                                 <input type="password" id="password" placeholder="Password" required>
                                 <button type="button" id="togglePassword" class="eye-button">
@@ -104,7 +104,7 @@ function loadNavbarFooter() {
                                 </button>
                             </div>
                             <a href="#" class="forget-password">Forget Your Password?</a>
-                            <button>Log In</button>
+                            <button id="login-succes-button">Log In</button>
                             <a id="login-change-view">Don't have account? <strong>Sign up</strong></a>
                         </form>
                     </div>
@@ -256,6 +256,31 @@ function loadNavbarFooter() {
     });
 
     console.log('Navbar and footer loaded successfully.');
+
+    const user = localStorage.getItem('user');
+    const popoverButton = document.getElementById('popover-usr');
+    console.log(user);
+
+    if (user != null) {
+        const parsedUser = JSON.parse(user);
+
+        if (parsedUser.name && parsedUser.email && parsedUser.password) {
+            console.log('User already logged in');
+            popoverButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.location.href = '/profile';
+            });
+        } else {
+            console.log('2NO User already logged in');
+            popoverButton.setAttribute('popovertarget', 'my-popover');
+        }
+        console.log(parsedUser.name);  
+        console.log(parsedUser.email);
+        console.log(parsedUser.password);
+    } else {
+        console.log('NO User already logged in');
+        popoverButton.setAttribute('popovertarget', 'my-popover');
+    }
 
 
 }

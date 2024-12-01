@@ -24,23 +24,26 @@
 
         <div class="profile__content">
             <div class="profile__picture">
-                <div class="profile__picture--img">
-                    <img src="assets/index/feature-1.webp" alt="profile image">
+                <div class="profile__picture--img" id="profile-img-container">
+                    <img src="assets/header/account.webp" alt="profile image" id="profile-img">
                     <div class="profile__picture--overlay">
-                        <img src="/assets/profile/choose-w.svg" alt="choose an image">
+                        <img src="/assets/profile/choose-w.svg" alt="choose an image" id="choose-image">
                     </div>
                 </div>
             </div>
+            
+            <!-- Input file oculto -->
+            <input type="file" id="file-input" style="display:none;">
             <p class="profile__picture--text">Click on your profile picture to update it.</p>
 
             <div class="profile__form">
             <div class="profile__name">
                 <p class="profile__name--title">Name</p>
-                <input type="text" class="profile__name--input">
+                <input type="text" class="profile__name--input" id="profile__name--input">
             </div>
             <div class="profile__email">
                 <p class="profile__email--title">E-Mail</p>
-                <input type="email" class="profile__email--input">
+                <input type="email" class="profile__email--input"  id="profile__email--input">
             </div>
 
             <div class="profile__password">
@@ -59,7 +62,7 @@
 
                 <div class="button__left">
                     <div class="button__logout">
-                        <a href="#">Logout</a>
+                        <a href="#" id="logout-btn">Logout</a>
                     </div>
                 </div>
 
@@ -68,7 +71,7 @@
                         <a href="#">Cancel</a>
                     </div>
                     <div class="button__save">
-                        <a href="#">Save Profile</a>
+                        <a href="#" id="save-profile-btn">Save Profile</a>
                     </div>
                 </div>
             </div>
