@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.webp"/>
+
+    <link href="../style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/global.css"/>
+    <link href="css/login.css" rel="stylesheet"/>
+    <script type="module" src="/javascript/header-footer-loader.js"></script>
+    <link rel="stylesheet" href="/css/header-footer.css"/>
+    <script type="module" src="/javascript/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/javascript/index-controller.js"></script>
+    <link rel="stylesheet" href="/css/profile.css"/>
+    <script src="/javascript/profile.js"></script>
+
+    <title>GastroHub | Profile</title>
+</head>
+<body>
+<header id="navbar"></header>
+<section class="pt-36">
+    <div class="profile">
+
+        <div class="profile__content">
+            <div class="profile__picture">
+                <div class="profile__picture--img">
+                    <img src="assets/index/feature-1.webp" alt="profile image">
+                    <div class="profile__picture--overlay">
+                        <img src="/assets/profile/choose-w.svg" alt="choose an image">
+                    </div>
+                </div>
+            </div>
+            <p class="profile__picture--text">Click on your profile picture to update it.</p>
+
+            <div class="profile__form">
+            <div class="profile__name">
+                <p class="profile__name--title">Name</p>
+                <input type="text" class="profile__name--input">
+            </div>
+            <div class="profile__email">
+                <p class="profile__email--title">E-Mail</p>
+                <input type="email" class="profile__email--input">
+            </div>
+
+            <div class="profile__password">
+                <p class="profile__password--title">Password</p>
+                <div class="profile__password--container">
+                    <input type="password" id="profile__password--input" class="profile__password--input">
+                    <div id="profile__password--eye" class="profile__password--eye">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="profile__button">
+
+                <div class="button__left">
+                    <div class="button__logout">
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+
+                <div class="button__right">
+                    <div class="button__cancel">
+                        <a href="#">Cancel</a>
+                    </div>
+                    <div class="button__save">
+                        <a href="#">Save Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<footer id="footer"></footer>
+</body>
+</html>
