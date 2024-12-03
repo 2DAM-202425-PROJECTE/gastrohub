@@ -46,24 +46,40 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     const passwordField = document.getElementById('password');
     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordField.setAttribute('type', type);
-    this.querySelector('i').classList.toggle('fa-eye');
-    this.querySelector('i').classList.toggle('fa-eye-slash');
+
+    const icon = document.getElementById('togglePassword-icon');
+
+    if(icon.getAttribute('src') === "assets/header/eye.svg") {
+        icon.setAttribute('src', "assets/header/eye_line.svg");
+    } else {
+        icon.setAttribute('src', "assets/header/eye.svg");
+    }
 });
 
 document.getElementById('togglePassword1').addEventListener('click', function () {
     const passwordField = document.getElementById('password1');
     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordField.setAttribute('type', type);
-    this.querySelector('i').classList.toggle('fa-eye');
-    this.querySelector('i').classList.toggle('fa-eye-slash');
+    const icon = document.getElementById('togglePassword1-icon');
+
+    if(icon.getAttribute('src') === "assets/header/eye.svg") {
+        icon.setAttribute('src', "assets/header/eye_line.svg");
+    } else {
+        icon.setAttribute('src', "assets/header/eye.svg");
+    }
 });
 
 document.getElementById('togglePassword2').addEventListener('click', function () {
     const passwordField = document.getElementById('password2');
     const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordField.setAttribute('type', type);
-    this.querySelector('i').classList.toggle('fa-eye');
-    this.querySelector('i').classList.toggle('fa-eye-slash');
+    const icon = document.getElementById('togglePassword2-icon');
+
+    if(icon.getAttribute('src') === "assets/header/eye.svg") {
+        icon.setAttribute('src', "assets/header/eye_line.svg");
+    } else {
+        icon.setAttribute('src', "assets/header/eye.svg");
+    }
 });
 
 document.getElementById('signUpBtn').addEventListener('click', function (event) {
