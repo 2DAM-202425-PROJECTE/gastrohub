@@ -62,30 +62,45 @@
     }
     @media (max-width: 992px) {
 
+      li::marker {
+        content: none;
+      }
+
+      .padding {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
       .menu-container {
         display: none;
         background-color: red;
       }
+
       body {
         font-size: 1.2rem; /* Augmenta la mida del text a 1.2rem */
 
       }
-      h2, h5, h3{
+
+      h2, h3, h5 {
         font-size: 50px !important;
       }
+
+      h3{
+        margin: 40px 0;
+      }
+
       section {
         p, li, a { /* Assegura't que altres elements textuals s'ajustin */
-          font-size: 38px !important; ;
+          font-size: 38px !important;;
 
         }
-        p{
-          line-height: 42px !important;
+        p {
+          line-height: 60px !important;
           text-align: justify !important;
         }
-        h2, h3{
-          line-height: 40px !important;
-          padding-top : 30px;
-          padding-bottom: 30px;
+
+        li, h2 {
+          line-height: 45px !important;
         }
       }
     }
