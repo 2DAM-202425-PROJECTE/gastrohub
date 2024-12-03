@@ -63,7 +63,7 @@ function loadNavbarFooter() {
                             <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Create Account</h1>
                             <div class="social-icons">
-                                <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
+                                <a href="#" class="icon"><img class="google-icon" src="assets/header/google.webp">Continue with Google</a>
                             </div>
                             <span>or use your email for registeration</span>
                             <input type="text" placeholder="Name" id="register-name" required>
@@ -71,13 +71,13 @@ function loadNavbarFooter() {
                             <div class="password-container">
                                 <input type="password" id="password1" placeholder="Password" required>
                                 <button type="button" id="togglePassword1" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword1-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <div class="password-container">
                                 <input type="password" id="password2" placeholder="Confirm Password" required>
                                 <button type="button" id="togglePassword2" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword2-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <div id="space">
@@ -93,14 +93,14 @@ function loadNavbarFooter() {
                             <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Log In</h1>
                             <div class="social-icons">
-                                <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
+                                <a href="#" class="icon"><img class="google-icon" src="assets/header/google.webp">Continue with Google</a>
                             </div>
                             <span>or use your email and password</span>
                             <input type="email" placeholder="Email" id="login-email" required>
                             <div class="password-container">
                                 <input type="password" id="password" placeholder="Password" required>
                                 <button type="button" id="togglePassword" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <a href="#" class="forget-password">Forget Your Password?</a>
