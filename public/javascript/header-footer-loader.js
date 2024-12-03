@@ -265,11 +265,19 @@ function loadNavbarFooter() {
         const parsedUser = JSON.parse(user);
 
         if (parsedUser.name && parsedUser.email && parsedUser.password) {
+
             console.log('User already logged in');
             popoverButton.addEventListener('click', function (event) {
                 event.preventDefault();
                 window.location.href = '/profile';
             });
+
+            if(parsedUser.image){
+                const image = document.getElementById("account-img");
+                image.setAttribute('src', parsedUser.image);
+                image.style.filter = 'none';
+
+            }
         } else {
             console.log('2NO User already logged in');
             popoverButton.setAttribute('popovertarget', 'my-popover');
