@@ -67,7 +67,7 @@
                 <div class="number"></div>
                 <div class="card-holder">
                   <label>Card holder</label>
-                  <div></div>
+                  <div class="card-name-person"></div>
                 </div>
                 <div class="card-expiration-date">
                   <label>Expires</label>
@@ -115,6 +115,21 @@
               </div>
             </div>
           </div>
+          <div class="total-price first-content">
+            <div class="product-order">
+              <p class="title-order">ORDER</p>
+              <div class="order-product">
+                <img src="assets/logo.webp" />
+                <p class="title-price">GASTROHUB SERVICE</p>
+              </div>
+            </div>
+            <div class="order-prices">
+              <p class="title-order">MANAGEMENT FEES</p>
+              <p class="title-price">2,99 €</p>
+              <p class="title-order">TOTAL</p>
+              <p class="title-price" id="final-order-price1"></p>
+            </div>
+          </div>
           <form class="form" autocomplete="off" novalidate>
             <fieldset>
               <label for="card-number">Card Number</label>
@@ -144,11 +159,11 @@
               />
             </fieldset>
             <fieldset>
-              <label for="card-holder">Card holder</label>
+              <label for="card-holder" >Card holder</label>
               <input type="text" id="card-holder" />
             </fieldset>
             <fieldset class="fieldset-expiration">
-              <label for="card-expiration-month">Expiration date</label>
+              <label for="card-expiration-month" >Expiration date</label>
               <div class="select">
                 <select id="card-expiration-month">
                   <option></option>
@@ -189,12 +204,12 @@
             <button class="btn"><i class="fa fa-lock"></i> submit</button>
           </form>
         </div>
-        <div id="total-price">
+        <div class="total-price second-content">
           <div class="product-order">
             <p class="title-order">ORDER</p>
             <div class="order-product">
               <img src="assets/logo.webp" />
-              <p>GASTROHUB SERVICE</p>
+              <p class="title-price">GASTROHUB SERVICE</p>
             </div>
           </div>
           <div class="order-prices">

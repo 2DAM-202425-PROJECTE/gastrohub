@@ -85,17 +85,17 @@ Form
     label {
       display: block;
       text-transform: uppercase;
-      font-size: 11px;
-      color: hsla(0, 0, 0, 0.6);
+       color: hsla(0, 0, 0, 0.6);
       margin-bottom: 5px;
-      font-weight: bold;
-      font-family: Inconsolata;
+      font-size: 11px;
+      font-weight: 700;
+      color: #c9d6de;
     }
 
     input,
     .select {
       width: 100%;
-      height: 38px;
+      height: 40px;
       color: hsl(0, 0, 20);
       padding: 10px;
       border-radius: 5px;
@@ -105,7 +105,8 @@ Form
       box-shadow: inset 0 1px 4px hsla(0, 0, 0, 0.2);
 
       &.input-cart-number {
-        width: 82px;
+        width: 80px;
+        height: 40px;
         display: inline-block;
         margin-right: 8px;
 
@@ -346,23 +347,28 @@ Credit Card
 #card-expiration-year,
 #card-ccv,
 .input-cart-number {
-  border: 1px solid black;
+  border: 1px solid #c9d6de;
 }
 
 #card-expiration-month,
 #card-expiration-year {
-  height: 38px;
+  height: 40px;
   border-radius: 5px;
+  font-size: 30px;
 }
 
-#total-price {
+.total-price:nth-child(1){
+  display: none;
+}
+
+.total-price {
 
   background-color: white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 20px;
   width: 400px;
-  height: 513px;
+  height: 517px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -400,11 +406,42 @@ Credit Card
   }
 }
 
+.first-content{
+  display: none;
+  width: 100%;
+  height: auto;
+  .order-prices{
+    margin-top: 30px;
+  }
+
+  .title-order{
+    font-size: 30px;
+  }
+
+  .title-price{
+    font-size: 30px;
+  }
+
+  .order-product{
+    margin-top: 20px;
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
 @media (max-width: 992px) {
-  #total-price {
+  .total-price{
     display: none;
   }
 
+
+
+
+  .first-content{
+    display: flex;
+  }
   .checkout {
     width: 850px;
     border-radius: 15px;
@@ -414,7 +451,7 @@ Credit Card
   .form {
     fieldset {
       input {
-        font-size: 20px;
+        font-size: 30px;
       }
 
       label {
@@ -448,6 +485,8 @@ Credit Card
         font-size: 25px;
       }
 
+
+
       .card-expiration-date label {
         font-size: 25px;
       }
@@ -478,4 +517,37 @@ Credit Card
       font-size: 30px;
     }
   }
+
+  .form {
+    & fieldset {
+      & input, & .select {
+        &.input-cart-number {
+          width: 100px;
+          height: 60px;
+          display: inline-block;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .form {
+    & fieldset {
+      input, .select {
+        height: 60px;
+      }
+    }
+  }
+
+  #card-expiration-month,
+  #card-expiration-year {
+    height: 60px;
+  }
+}
+
+.card-holder .card-name-person{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 95%;
 }

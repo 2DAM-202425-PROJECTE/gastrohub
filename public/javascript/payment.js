@@ -18,6 +18,8 @@ window.onload = function() {
                 window.location.href = '/price';
             }
             document.getElementById('final-order-price').innerHTML = "<strong>" + (parseInt(numero) + 2.99) + " €</strong>";
+            document.getElementById('final-order-price1').innerHTML = "<strong>" + (parseInt(numero) + 2.99) + " €</strong>";
+
         } else {
             console.log('No price found');
             window.location.href = '/price';
@@ -30,27 +32,29 @@ window.onload = function() {
 
 document.querySelectorAll('.input-cart-number').forEach(function (input, index, inputs) {
     input.addEventListener('keyup', function () {
-        if (input.value.length > 3 && inputs[index + 1]) {
+        // Mover el foco solo si el campo actual tiene exactamente 4 caracteres
+        if (input.value.length === 4 && inputs[index + 1]) {
             inputs[index + 1].focus();
         }
 
+        // Concatenar los valores de todos los inputs para mostrar el número de la tarjeta
         let cardNumber = '';
         inputs.forEach(function (inp) {
             cardNumber += inp.value + ' ';
-            if (inp.value.length === 4 && inputs[index + 1]) {
-                inputs[index + 1].focus();
-            }
         });
 
+        // Actualizar la vista del número de tarjeta
         document.querySelector('.credit-card-box .number').textContent = cardNumber.trim();
     });
 
     input.addEventListener('change', function () {
-        if (input.value.length > 3 && inputs[index + 1]) {
+        // Mismo comportamiento para el evento change
+        if (input.value.length === 4 && inputs[index + 1]) {
             inputs[index + 1].focus();
         }
     });
 });
+
 
 document.getElementById('card-holder').addEventListener('keyup', function () {
     const value = this.value;
