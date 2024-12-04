@@ -209,7 +209,7 @@ function loadNavbarFooter() {
             </div>
             <div>
                 <a href="/contact">Contact</a>
-                <a href="/privacy-policy">Privacy policy</a>
+                <a href="/privacy-policy">Privacy <!---->policy</a>
                 <a href="/about_us">About Us</a>
                                 <a href="/legal-info">Legal Information</a>
 

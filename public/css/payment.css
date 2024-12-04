@@ -401,10 +401,81 @@ Credit Card
 }
 
 @media (max-width: 992px) {
-  .payment-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  #total-price {
+    display: none;
+  }
+
+  .checkout {
+    width: 850px;
+    border-radius: 15px;
+    margin-top: 250px;
+  }
+
+  .form {
+    fieldset {
+      input {
+        font-size: 20px;
+      }
+
+      label {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .fieldset-expiration {
+    margin-bottom: 20px;
+  }
+
+  .credit-card-box {
+    width: 550px;
+    top: -175px;
+
+    .front {
+      width: 550px;
+      height: 325px;
+
+      .chip {
+        width: 80px;
+        height: 60px;
+      }
+
+      .logo {
+        width: 80px;
+      }
+
+      .card-holder label {
+        font-size: 25px;
+      }
+
+      .card-expiration-date label {
+        font-size: 25px;
+      }
+    }
+
+    .back {
+        width: 550px;
+        height: 325px;
+    }
+
+    .ccv {
+      height: 46px;
+      top: 120px;
+      padding: 0 10px;
+      label {
+        font-size: 24px;
+        display: block;
+        margin: -35px 0 14px;
+      }
+      div {
+        font-size: 24px;
+      }
+    }
+
+  }
+  .form {
+    button{
+      font-size: 30px;
+    }
   }
 }

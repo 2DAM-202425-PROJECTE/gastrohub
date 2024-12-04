@@ -469,6 +469,7 @@ footer {
 
             .info-footer {
 
+                order: 2;
 
                 img {
                     width: 120px;
@@ -490,6 +491,7 @@ footer {
 
             .links-footer {
                 font-size: 30px;
+                order: 3;
             }
 
             .title-footer {
@@ -499,6 +501,7 @@ footer {
             .news-footer {
 
                 align-items: center;
+                order: 1;
 
                 .subscribe-form {
                     justify-content: center;
