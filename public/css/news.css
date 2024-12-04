@@ -16,7 +16,11 @@ section{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 100px;
+
+
 }
+
+
 
 #top-news{
     width: 80%;
@@ -206,7 +210,6 @@ section{
         background: -webkit-linear-gradient(#000000, #8f8f95);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 
     #news {
@@ -243,5 +246,33 @@ section{
         }
 
         
+    }
+}
+
+@media (max-width: 992px) {
+    .title{
+        font-size: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    #news {
+        #row-news {
+            .row-new {
+                .text {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .column-news {
+            .column-new {
+                .left {
+                    .text {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
     }
 }
