@@ -319,6 +319,9 @@ body{
     color: white;
     font-size: 16px;
     margin-top: 20px;
+}
+
+ .features__info--text-first {
     margin-bottom: 150px;
 }
 
