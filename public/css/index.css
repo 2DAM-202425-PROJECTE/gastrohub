@@ -319,6 +319,7 @@ body{
     color: white;
     font-size: 16px;
     margin-top: 20px;
+    margin-bottom: 150px;
 }
 
 @media (prefers-color-scheme: light) {
