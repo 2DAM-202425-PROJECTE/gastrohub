@@ -1,3 +1,17 @@
+.title-contact {
+    font-size: 70px;
+    background: -webkit-linear-gradient(#d5d5d5, #5A595F) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .title-contact {
+        font-size: 120px;
+    }
+}
+
 /* Estilos para la vista previa de los archivos */
 #file-preview {
     display: flex;
@@ -186,7 +200,7 @@ textarea:focus {
         border-radius: 10px;
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     #country-code {
         max-width: 175px; /* Adjust the width to be smaller */
         height: 100px; /* Adjust the height */
@@ -196,5 +210,17 @@ textarea:focus {
         align-items: center; /* Center the text vertically */
         border-radius: 10px; /* Adjust the border radius */
         margin-right: 1rem; /* Add a right margin */
+    }
+
+    .form__contact {
+        margin-top: 50px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .title-contact{
+        background: -webkit-linear-gradient(#000000, #8f8f95);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
