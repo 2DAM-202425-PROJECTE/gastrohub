@@ -129,7 +129,7 @@ function loadNavbarFooter() {
     <div class="lg:hidden fixed inset-0 z-50 flex items-start justify-center bg-black bg-opacity-50 mt-24 pointer-events-none" role="dialog" aria-modal="true" x-show="menuOpen">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50"></div>
-        <div class="bg-white dark:bg-black w-full h-1/2 overflow-y-auto px-6 py-6 flex justify-center pointer-events-auto">
+        <div id="dropdown__mobile" class="bg-white dark:bg-black w-full h-1/2 overflow-y-auto px-6 py-6 flex justify-center pointer-events-auto">
             <div class="w-full">
                 <div class="flex items-center justify-between mt-24 mr-7">
                     <button type="button" class="-m-2.5 rounded-md p-2.5 dark:text-pwhite text-black ml-auto" @click="menuOpen = false">
