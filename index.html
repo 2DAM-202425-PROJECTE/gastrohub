@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/assets/logo.png"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.webp"/>
     <link rel="stylesheet" href="public/css/index.css"/>
     <link href="style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="public/css/global.css"/>
@@ -10,77 +10,107 @@
     <link href="public/css/carroussel.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link href="public/css/login.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="public/css/header-footer.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="public/javascript/carroussel.js"></script>
+    <script type="module" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="module" src="public/javascript/carroussel.js"></script>
     <script type="module" src="public/javascript/header.js"></script>
-    <script src="public/javascript/index-controller.js"></script>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>
+    <script type="module" src="public/javascript/index-controller.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>-->
+
+
+    <!--    <script type="module" src="public/javascript/spline/spline-viewer.js"></script>-->
 
     <title>GastroHub</title>
 </head>
 <body>
 <header id="navbar"></header>
 <section>
-<div id="hero">
-    <div class="rocket w-full">
-        <spline-viewer url="https://prod.spline.design/Fx6ixf1sjyGk0M4B/scene.splinecode"></spline-viewer>    </div>
-    <div id="hero-top">
-        <div id="left-top-hero">
-            <div class="tag">
-                <p class="number-one">Nº1</p>
-                <p>Number one in restaurant management solutions</p>
+    <div class="header">
+        <div class="header__left">
+            <div class="header__tag">
+                <p class="header__tag--number">Nº1</p>
+                <p class="header__tag--text">Number one in restaurant management solutions</p>
             </div>
-            <h1>Simplify management, <br> <strong class="text-8xl">boost</strong> <strong>your restaurant</strong></h1>
+            <h1 class="header__title">Simplify management, <br> <span class="header__title--boost">boost</span> your
+                restaurant </h1>
+            <img src="public/assets/index/grafic.webp" alt="graph image">
         </div>
 
-        <div id="right-top-hero">
-            <h2>Empower your restaurant to reach more customers and boost efficiency with the industry’s top management solution.</h2>
-            <div id="buttons">
-                <a href="public/price.html" class="button">Buy now</a>
-<!--                <div class="account-hero">-->
-<!--                    <p>Have an account?</p>-->
-<!--                    <a href="/account">Login</a>-->
-<!--                </div>-->
-            </div>
+        <div class="header__right">
+            <h2 class="header__text">Empower your restaurant to reach more customers and boost efficiency with the
+                industry’s top
+                management solution.</h2>
+            <a href="price" class="header__btn">Buy now</a>
+            <img class="header__logo" src="public/assets/index/hero-btm.webp" alt="logo image">
         </div>
     </div>
-    <div id="hero-bottom">
-        <spline-viewer loading-anim-type="none" url="https://prod.spline.design/i57fZTEsHriG48BQ/scene.splinecode"></spline-viewer>
-    </div>
 
-</div>
-
-    <div id="features">
-        <h2>Enjoy the unique features that set us apart, designed to elevate your restaurant's success.</h2>
-        <div id="first-feature">
-            <div class="left">
-                <p class="title">Transform Your Restaurant Space!</p>
-                <p class="text">With our app, you can intuitively design the restaurant layout, adapting the arrangement of tables and elements to suit your preferences. This complete customization will not only enhance the aesthetics of your establishment but also increase customer satisfaction, making them feel welcomed in a unique environment tailored to their needs.</p>
+    <div class="features">
+        <h2 class="features__title">Enjoy the unique features that set us apart, designed to elevate your restaurant's
+            success.</h2>
+        <div class="features__first feature">
+            <div class="features__info">
+                <p class="features__info--title">Transform Your Restaurant Space!</p>
+                <p class="features__info--text features__info--text-first">With our app, you can intuitively design the restaurant layout, adapting
+                    the arrangement
+                    of tables and elements to suit your preferences. This complete customization will not only enhance
+                    the aesthetics of your establishment but also increase customer satisfaction, making them feel
+                    welcomed in a unique environment tailored to their needs.</p>
             </div>
-            <div class="right">
-                <img src="public/assets/index/feature-1.png" alt="An image of a representation of our app">
+            <div class="features__img">
+                <img src="public/assets/index/feature-1.webp" alt="An image of a representation of our app">
             </div>
         </div>
-        <div id="second-features">
-            <div class="right feature">
-                <p class="title">Update Your Offerings in Real Time!</p>
-                <p class="text">We offer an interactive digital menu that customers can access from their mobile devices. Fully customizable and adaptable, it allows for immediate updates and the inclusion of specific dietary options, ensuring your clients always have access to the best selection. This innovative menu enhances the dining experience while allowing you to respond quickly to market trends.</p>
-                <img src="public/assets/index/feature-2.jpg" alt="An image of a customer in a restaurant using our app to order the food">
+
+
+        <div class="features__mid">
+            <div class="features__second feature">
+                <div class="features__info">
+                    <p class="features__info--title">Update Your Offerings in Real Time!</p>
+                    <p class="features__info--text">We offer an interactive digital menu that customers can access from
+                        their mobile
+                        devices. Fully customizable and adaptable, it allows for immediate updates and the inclusion of
+                        specific dietary options, ensuring your clients always have access to the best selection. This
+                        innovative menu enhances the dining experience while allowing you to respond quickly to market
+                        trends.</p>
+                </div>
+                <div class="features__img">
+                    <img src="public/assets/index/feature-2.webp"
+                         alt="An image of a customer in a restaurant using our app to order the food">
+                </div>
             </div>
-            <div class="left feature">
-                <p class="title">Optimize Your Service  Efficiency!</p>
-                <p class="text">Manage orders in real time with instant notifications to keep your team informed and responsive. Quickly update dish statuses to streamline workflow, boost efficiency, and elevate customer satisfaction.</p>
-                <img src="public/assets/index/feature-3.jpg" alt="An image of some restaurant workers working with out app">
+
+            <div class="features__third feature">
+                <div class="features__info">
+                    <p class="features__info--title">Optimize Your Service Efficiency!</p>
+                    <p class="features__info--text">Manage orders in real time with instant notifications to keep your
+                        team informed and
+                        responsive. Quickly update dish statuses to streamline workflow, boost efficiency, and elevate
+                        customer satisfaction.</p>
+                </div>
+                <div class="features__img">
+                    <img src="public/assets/index/feature-3.webp"
+                         alt="An image of some restaurant workers working with out app">
+                </div>
             </div>
         </div>
-        <div id="third-feature" class="feature">
-            <p class="title">Encourage Customer Loyalty with Rewards!</p>
-            <p class="text">Incentivize customer loyalty with our points system. As customers spend at the restaurant, they can accumulate points redeemable for attractive rewards. This initiative will not only enhance customer satisfaction but also encourage repeat visits, helping you build a loyal and engaged customer base.</p>
-            <img style="top:40%" src="public/assets/index/feature-4.jpg" alt="An image of someone ordering food with our app">
 
+        <div class="features__fourth feature">
+            <div class="features__info">
+                <p class="features__info--title">Encourage Customer Loyalty with Rewards!</p>
+                <p class="features__info--text">Incentivize customer loyalty with our points system. As customers spend
+                    at the restaurant,
+                    they can accumulate points redeemable for attractive rewards. This initiative will not only enhance
+                    customer satisfaction but also encourage repeat visits, helping you build a loyal and engaged
+                    customer
+                    base.</p>
+            </div>
+            <div class="features__img">
+                <img style="top:40%" src="public/assets/index/feature-4.webp"
+                     alt="An image of someone ordering food with our app">
+            </div>
         </div>
     </div>
 
@@ -90,42 +120,45 @@
                 <div class="title">STANDARD</div>
                 <div class="price"><strong>$37.99</strong>/month</div>
                 <div class="description">
-                   <ul>
-                       <li class="flex gap-x-3">
-                           <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
-                                data-slot="icon">
-                               <path fill-rule="evenodd"
-                                     d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                                     clip-rule="evenodd"/>
-                           </svg>
-                           5 Workers
-                       </li>
-                       <li class="flex gap-x-3">
-                           <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
-                                data-slot="icon">
-                               <path fill-rule="evenodd"
-                                     d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                                     clip-rule="evenodd"/>
-                           </svg>
-                           Point Of Sale (POS) Service
-                       </li>
-                       <li class="flex gap-x-3">
-                           <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
-                                data-slot="icon">
-                               <path fill-rule="evenodd"
-                                     d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                                     clip-rule="evenodd"/>
-                           </svg>
-                           Order Management
-                       </li>
-                       <li class="flex gap-x-3">
-                           <div class="h-6 w-5"></div>
-                           And much more...
-                       </li>
-                   </ul>
+                    <ul>
+                        <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
+                                 data-slot="icon">
+                                <path fill-rule="evenodd"
+                                      d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            5 Workers
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
+                                 data-slot="icon">
+                                <path fill-rule="evenodd"
+                                      d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            Point Of Sale (POS) Service
+                        </li>
+                        <li class="flex gap-x-3">
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
+                                 data-slot="icon">
+                                <path fill-rule="evenodd"
+                                      d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            Order Management
+                        </li>
+                        <li class="flex gap-x-3">
+                            <div class="h-6 w-5"></div>
+                            And much more...
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <a class="button" href="public/price.html">BUY NOW</a>
+            <a class="button" href="price">BUY NOW</a>
         </div>
 
         <div class="card">
@@ -138,7 +171,8 @@
                 <div class="description">
                     <ul>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -147,7 +181,8 @@
                             Unlimited Workers
                         </li>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -156,7 +191,8 @@
                             Reservation Service
                         </li>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -171,7 +207,7 @@
                     </ul>
                 </div>
             </div>
-            <a class="button" href="public/price.html">BUY NOW</a>
+            <a class="button" href="price">BUY NOW</a>
         </div>
 
         <div class="card">
@@ -181,7 +217,8 @@
                 <div class="description">
                     <ul>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -190,7 +227,8 @@
                             Greater Flexibility and Scalability
                         </li>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-white text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -199,7 +237,8 @@
                             Seamless Integration
                         </li>
                         <li class="flex gap-x-3">
-                            <svg class="h-6 w-5 flex-none text-pteal" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                            <svg class="h-6 w-5 flex-none dark:text-pwhite text-black" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true"
                                  data-slot="icon">
                                 <path fill-rule="evenodd"
                                       d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
@@ -214,7 +253,7 @@
                     </ul>
                 </div>
             </div>
-            <a class="button" href="public/contact.html">CONTACT NOW</a>
+            <a class="button" href="contact">CONTACT NOW</a>
         </div>
     </div>
 
@@ -223,110 +262,120 @@
             <div class="item" style="background-image: url(public/assets/index/restaurant1.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>This restaurant management software has significantly streamlined our operations, enhancing both efficiency and customer service.</p>
+                    <p>This restaurant management software has significantly streamlined our operations, enhancing both
+                        efficiency and customer service.</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(public/assets/index/restaurant2.jpeg);">
+            <div class="item" style="background-image: url(public/assets/index/restaurant2.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>Its user-friendly design made the transition easy for our staff, with minimal training required.</p>
+                    <p>Its user-friendly design made the transition easy for our staff, with minimal training
+                        required.</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(public/assets/index/restaurant3.jpg);">
+            <div class="item" style="background-image: url(public/assets/index/restaurant3.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>Customer support is outstanding, providing quick and effective assistance whenever we encounter issues.</p>
+                    <p>Customer support is outstanding, providing quick and effective assistance whenever we encounter
+                        issues.</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(public/assets/index/restaurant7.jpeg);">
+            <div class="item" style="background-image: url(public/assets/index/restaurant7.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>The customer support team is exceptional, always responsive and offering helpful solutions to any challenges we face.</p>
+                    <p>The customer support team is exceptional, always responsive and offering helpful solutions to any
+                        challenges we face.</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(public/assets/index/restaurant4.jpg);">
+            <div class="item" style="background-image: url(public/assets/index/restaurant4.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>The real-time inventory tracking feature has helped us reduce waste and optimize our purchasing.</p>
+                    <p>The real-time inventory tracking feature has helped us reduce waste and optimize our
+                        purchasing.</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(public/assets/index/restaurant5.jpg);">
+            <div class="item" style="background-image: url(public/assets/index/restaurant5.webp);">
                 <div class="item-desc">
                     <h3>★★★★★</h3>
-                    <p>Seamless integration with our POS system has minimized errors and simplified financial reporting.</p>
+                    <p>Seamless integration with our POS system has minimized errors and simplified financial
+                        reporting.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
-<!--    <div id="reviews">-->
-<!--        <div class="carousel-container">-->
-<!--            <div id="carousel-track" class="carousel-track">-->
-<!--                <div class="review">-->
-<!--                    <div class="image">-->
-<!--                        <img src="./assets/index/restaurant1.webp">-->
-<!--                    </div>-->
-<!--                    <div class="info">-->
-<!--                        <p class="stars">★★★★★</p>-->
-<!--                        <p class="text">This restaurant management software has significantly streamlined our operations, enhancing both efficiency and customer service.</p>-->
-<!--                        <p class="author">— Caliu, New York</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="review">-->
-<!--                    <div class="image">-->
-<!--                        <img src="./assets/index/restaurant2.jpeg">-->
-<!--                    </div>-->
-<!--                    <div class="info">-->
-<!--                        <p class="stars">★★★★★</p>-->
-<!--                        <p class="text">Its user-friendly design made the transition easy for our staff, with minimal training required.</p>-->
-<!--                        <p class="author">— Pizzeoto, Italia</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="review">-->
-<!--                    <div class="image">-->
-<!--                        <img src="./assets/index/restaurant3.jpg">-->
-<!--                    </div>-->
-<!--                    <div class="info">-->
-<!--                        <p class="stars">★★★★★</p>-->
-<!--                        <p class="text">Customer support is outstanding, providing quick and effective assistance whenever we encounter issues.</p>-->
-<!--                        <p class="author">— Coffe Vitoria, España</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="review">-->
-<!--                    <div class="image">-->
-<!--                        <img src="./assets/index/restaurant4.jpg">-->
-<!--                    </div>-->
-<!--                    <div class="info">-->
-<!--                        <p class="stars">★★★★★</p>-->
-<!--                        <p class="text">The real-time inventory tracking feature has helped us reduce waste and optimize our purchasing.</p>-->
-<!--                        <p class="author">— Chido, Argentina</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="review">-->
-<!--                    <div class="image">-->
-<!--                        <img src="./assets/index/restaurant5.jpg">-->
-<!--                    </div>-->
-<!--                    <div class="info">-->
-<!--                        <p class="stars">★★★★★</p>-->
-<!--                        <p class="text">Seamless integration with our POS system has minimized errors and simplified financial reporting.</p>-->
-<!--                        <p class="author">— Amigos Kebab, Tortosa</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div id="reviews">-->
+    <!--        <div class="carousel-container">-->
+    <!--            <div id="carousel-track" class="carousel-track">-->
+    <!--                <div class="review">-->
+    <!--                    <div class="image">-->
+    <!--                        <img src="./assets/index/restaurant1.webp">-->
+    <!--                    </div>-->
+    <!--                    <div class="info">-->
+    <!--                        <p class="stars">★★★★★</p>-->
+    <!--                        <p class="text">This restaurant management software has significantly streamlined our operations, enhancing both efficiency and customer service.</p>-->
+    <!--                        <p class="author">— Caliu, New York</p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="review">-->
+    <!--                    <div class="image">-->
+    <!--                        <img src="./assets/index/restaurant2.jpeg">-->
+    <!--                    </div>-->
+    <!--                    <div class="info">-->
+    <!--                        <p class="stars">★★★★★</p>-->
+    <!--                        <p class="text">Its user-friendly design made the transition easy for our staff, with minimal training required.</p>-->
+    <!--                        <p class="author">— Pizzeoto, Italia</p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="review">-->
+    <!--                    <div class="image">-->
+    <!--                        <img src="./assets/index/restaurant3.jpg">-->
+    <!--                    </div>-->
+    <!--                    <div class="info">-->
+    <!--                        <p class="stars">★★★★★</p>-->
+    <!--                        <p class="text">Customer support is outstanding, providing quick and effective assistance whenever we encounter issues.</p>-->
+    <!--                        <p class="author">— Coffe Vitoria, España</p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="review">-->
+    <!--                    <div class="image">-->
+    <!--                        <img src="./assets/index/restaurant4.jpg">-->
+    <!--                    </div>-->
+    <!--                    <div class="info">-->
+    <!--                        <p class="stars">★★★★★</p>-->
+    <!--                        <p class="text">The real-time inventory tracking feature has helped us reduce waste and optimize our purchasing.</p>-->
+    <!--                        <p class="author">— Chido, Argentina</p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="review">-->
+    <!--                    <div class="image">-->
+    <!--                        <img src="./assets/index/restaurant5.jpg">-->
+    <!--                    </div>-->
+    <!--                    <div class="info">-->
+    <!--                        <p class="stars">★★★★★</p>-->
+    <!--                        <p class="text">Seamless integration with our POS system has minimized errors and simplified financial reporting.</p>-->
+    <!--                        <p class="author">— Amigos Kebab, Tortosa</p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-    
-    
+
     <div id="aboutus">
         <div class="left">
-            <img src="public/assets/index/businessman.png" alt="An representation of some workers in Gastrohub working with their customers">
+            <img src="public/assets/index/businessman.webp"
+                 alt="An representation of some workers in Gastrohub working with their customers">
         </div>
         <div class="right">
             <h2>This is <strong>GastroHub</strong></h2>
-            <p>GastroHub is your smart solution for restaurant management, boosting efficiency and customer satisfaction. Our platform reduces order errors and speeds up service, while an intuitive interface lets customers browse menus, customize orders, and track them in real time. Enjoy quick payments and a rewarding loyalty program, all with robust data security. Transform your restaurant experience with GastroHub today.</p>
-            <a href="public/about_us.html">We are your best option!</a>
+            <p>GastroHub is your smart solution for restaurant management, boosting efficiency and customer
+                satisfaction. Our platform reduces order errors and speeds up service, while an intuitive interface lets
+                customers browse menus, customize orders, and track them in real time. Enjoy quick payments and a
+                rewarding loyalty program, all with robust data security. Transform your restaurant experience with
+                GastroHub today.</p>
+            <a href="about_us">We are your best option!</a>
         </div>
     </div>
 
@@ -334,34 +383,46 @@
         <div class="contact-container">
             <p class="tag">Don’t think any longer!</p>
             <p class="title">Get Ready Now!</p>
-            <p class="text"><strong>Not sure where to start? </strong> Contact us, and our team will guide you through the process to get you on track quickly and easily!</p>
-            <a class="button" href="public/contact.html">CONTACT US</a>
+            <p class="text"><strong>Not sure where to start? </strong> Contact us, and our team will guide you through
+                the process to get you on track quickly and easily!</p>
+            <a class="button" href="contact">CONTACT US</a>
         </div>
     </div>
 
     <div id="faq">
         <div class="faq-item">
             <div class="faq-question">What is GastroHub?</div>
-            <div class="faq-answer">GastroHub is an innovative restaurant management platform designed to streamline operations, enhance efficiency, and improve customer satisfaction through features like real-time order tracking and an intuitive interface.</div>
+            <div class="faq-answer">GastroHub is an innovative restaurant management platform designed to streamline
+                operations, enhance efficiency, and improve customer satisfaction through features like real-time order
+                tracking and an intuitive interface.
+            </div>
         </div>
         <div class="faq-item">
             <div class="faq-question">How does GastroHub improve the dining experience?</div>
-            <div class="faq-answer">GastroHub enhances the dining experience by reducing order errors, enabling customers to customize their orders, and providing real-time updates on order status. It also offers quick payment options and a loyalty rewards program.</div>
+            <div class="faq-answer">GastroHub enhances the dining experience by reducing order errors, enabling
+                customers to customize their orders, and providing real-time updates on order status. It also offers
+                quick payment options and a loyalty rewards program.
+            </div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Is my data secure with GastroHub?</div>
-            <div class="faq-answer">Yes, GastroHub prioritizes data security by implementing robust protocols to protect personal and financial information, ensuring a safe experience for all users.</div>
+            <div class="faq-answer">Yes, GastroHub prioritizes data security by implementing robust protocols to protect
+                personal and financial information, ensuring a safe experience for all users.
+            </div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Can I access GastroHub on different devices?</div>
-            <div class="faq-answer">Absolutely! GastroHub is designed to be responsive and can be accessed seamlessly across smartphones, tablets, and computers.</div>
+            <div class="faq-answer">Absolutely! GastroHub is designed to be responsive and can be accessed seamlessly
+                across smartphones, tablets, and computers.
+            </div>
         </div>
         <div class="faq-item">
             <div class="faq-question">How do I join the loyalty rewards program?</div>
-            <div class="faq-answer">Customers automatically join the loyalty rewards program by placing orders through GastroHub. You’ll earn points for each order, which can be redeemed for exclusive rewards.</div>
+            <div class="faq-answer">Customers automatically join the loyalty rewards program by placing orders through
+                GastroHub. You’ll earn points for each order, which can be redeemed for exclusive rewards.
+            </div>
         </div>
     </div>
-
 
 
 </section>

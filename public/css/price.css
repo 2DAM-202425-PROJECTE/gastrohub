@@ -3,3 +3,106 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media (prefers-color-scheme: light) {
+        .title-price{
+            background: -webkit-linear-gradient(#000000, #8f8f95);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+}
+
+@media (max-width: 992px) {
+        .title-price{
+            font-size: 100px;
+        }
+    .second-title{
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    .full-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.first-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+        width: 85%;
+    }
+}
+
+.second-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+        width: 95%;
+
+    }
+}
+
+.third-container {
+    @media (max-width: 992px) {
+        min-height: 1200px;
+        width: 85%;
+
+    }
+}
+#tier-enterprise {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+#tier-hobby {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+#tier-hobby-2 {
+    @media (max-width: 992px) {
+        font-size: 40px;
+    }
+}
+
+.text-price {
+    @media (max-width: 992px) {
+        font-size: 100px;
+    }
+}
+
+.text-base {
+    @media (max-width: 992px) {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+}
+
+.caracteristiques {
+    @media (max-width: 992px) {
+        font-size: 40px;
+        line-height: 2;
+    }
+}
+
+.icono{
+    @media (min-width: 992px) {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.boton_price {
+    @media (max-width: 992px) {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+}
+
+.table_pricing {
+    @media (max-width: 992px) {
+        display: none;
+    }
+}

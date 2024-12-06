@@ -16,18 +16,18 @@ function loadNavbarFooter() {
                 <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="logo-head">
-            <a href="/index.html"><img src="/assets/logoblack.png" alt="GastroHub"/></a>
-            <p>GASTROHUB</p>
+            <a href="/"><img src="assets/logoblack.webp" alt="GastroHub"/></a>
+            <a href="/"><p>GASTROHUB</p></a>
         </div>
         <div class="w-[700px] h-full flex justify-evenly items-center hidden lg:flex lg:gap-x-12 text-pblack dark:text-pwhite font-bold">
-            <a class="hover:text-pteal" href="/features.html">FEATURES</a>
-            <a class="hover:text-pteal" href="/price.html">PRICE</a>
-            <a class="hover:text-pteal" href="/news.html">NEWS</a>
-            <a class="hover:text-pteal" href="/contact.html">CONTACT</a>
+            <a class="hover:text-pteal" href="features">FEATURES</a>
+            <a class="hover:text-pteal" href="price">PRICE</a>
+            <a class="hover:text-pteal" href="news">NEWS</a>
+            <a class="hover:text-pteal" href="contact">CONTACT</a>
         </div>
 
         <div id="right-head">
-            <a href="/price.html" id="neon-btn"
+            <a href="/price" id="neon-btn"
                class="hidden lg:flex justify-center gap-2 items-center mx-auto shadow-lg text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 dark:border-pblack-light before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group dark:bg-pblack-light dark:text-pwhite">
                 Explore
                 <svg
@@ -41,12 +41,12 @@ function loadNavbarFooter() {
                     ></path>
                 </svg>
             </a>
-            <button id="popover-usr" popovertarget="my-popover">
-                <img id="account-img" src="assets/header/account.png">
+            <button id="popover-usr" >
+                <img alt="Account button icon" id="account-img" src="assets/header/account.webp">
             </button>
             <div class="flex lg:hidden ml-12">
                 <button type="button"
-                        class="-m-1 inline-flex items-center justify-center rounded-md p-2 text-pwhite"
+                        class="-m-1 inline-flex items-center justify-center rounded-md p-2 dark:text-pwhite text-black"
                         @click="menuOpen = true">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -60,24 +60,24 @@ function loadNavbarFooter() {
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form class="bg-white flex items-center justify-center flex-col px-10 h-full">
-                            <img class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Create Account</h1>
                             <div class="social-icons">
-                                <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
+                                <a href="#" class="icon"><img class="google-icon" src="assets/header/google.webp">Continue with Google</a>
                             </div>
                             <span>or use your email for registeration</span>
-                            <input type="text" placeholder="Name" required>
-                            <input type="email" placeholder="Email" required>
+                            <input type="text" placeholder="Name" id="register-name" required>
+                            <input type="email" placeholder="Email" id="register-email"  required>
                             <div class="password-container">
                                 <input type="password" id="password1" placeholder="Password" required>
                                 <button type="button" id="togglePassword1" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword1-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <div class="password-container">
                                 <input type="password" id="password2" placeholder="Confirm Password" required>
                                 <button type="button" id="togglePassword2" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword2-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <div id="space">
@@ -90,21 +90,21 @@ function loadNavbarFooter() {
                     </div>
                     <div class="form-container sign-in">
                         <form>
-                            <img class="logo-login" src="assets/logo.png">
+                            <img alt="GastroHub logo" class="logo-login" src="assets/logo.webp">
                             <h1>Log In</h1>
                             <div class="social-icons">
-                                <a href="#" class="icon"><i class="fa-brands fa-google"></i>Continue with Google</a>
+                                <a href="#" class="icon"><img class="google-icon" src="assets/header/google.webp">Continue with Google</a>
                             </div>
                             <span>or use your email and password</span>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" placeholder="Email" id="login-email" required>
                             <div class="password-container">
                                 <input type="password" id="password" placeholder="Password" required>
                                 <button type="button" id="togglePassword" class="eye-button">
-                                    <i class="fa fa-eye"></i>
+                                    <img class="eye-icon" id="togglePassword-icon" src="assets/header/eye.svg">
                                 </button>
                             </div>
                             <a href="#" class="forget-password">Forget Your Password?</a>
-                            <button>Log In</button>
+                            <button id="login-succes-button">Log In</button>
                             <a id="login-change-view">Don't have account? <strong>Sign up</strong></a>
                         </form>
                     </div>
@@ -129,10 +129,10 @@ function loadNavbarFooter() {
     <div class="lg:hidden fixed inset-0 z-50 flex items-start justify-center bg-black bg-opacity-50 mt-24 pointer-events-none" role="dialog" aria-modal="true" x-show="menuOpen">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50"></div>
-        <div class="bg-white dark:bg-black w-full h-1/2 overflow-y-auto px-6 py-6 flex justify-center pointer-events-auto">
+        <div id="dropdown__mobile" class="bg-white dark:bg-black w-full h-1/2 overflow-y-auto px-6 py-6 flex justify-center pointer-events-auto">
             <div class="w-full">
                 <div class="flex items-center justify-between mt-24 mr-7">
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-pwhite ml-auto" @click="menuOpen = false">
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 dark:text-pwhite text-black ml-auto" @click="menuOpen = false">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -143,19 +143,19 @@ function loadNavbarFooter() {
                     <div class="flex flex-col items-center justify-center h-full">
                         <div class="-my-6 divide-y divide-gray-500/10 w-full">
                             <div class="pt-16 pl-16 space-y-2 py-6 bt-3xl">
-                                <a href="/features.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">FEATURES</a>
-                                <a href="/price.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">PRICE</a>
-                                <a href="/news.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">NEWS</a>
-                                <a href="/contact.html" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">CONTACT</a>
+                                <a href="/features" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">FEATURES</a>
+                                <a href="/price" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">PRICE</a>
+                                <a href="/news" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">NEWS</a>
+                                <a href="/contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center justify-start">CONTACT</a>
                             </div>
 <!--                            <div class="py-6 pl-16 border-t border-gray-500/10 flex">-->
-<!--                                <a href="./index.html#contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">Collaborate</a>-->
+<!--                                <a href="./index#contact" class="-mx-3 block rounded-lg px-3 py-12 text-5xl font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">Collaborate</a>-->
 <!--                            </div>-->
                         </div>
                     </div>
                 </div>
                 <div class="fixed inset-x-0 bottom-80">
-                    <a href="/price.html"
+                    <a href="/price"
                        class="w-1/2 h-24 flex justify-center gap-2 items-center mx-auto shadow-lg text-5xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 dark:border-pblack-light relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group dark:bg-pblack-light dark:text-pwhite">
                         Explore
                         <svg
@@ -180,19 +180,20 @@ function loadNavbarFooter() {
     <footer>
     <div class="top-footer">
         <div class="info-footer">
-            <img src="assets/logo.png" alt="logo">
+            <img class="logo-gastro" src="assets/logo.webp" alt="GastroHub logo">
             <p>GastroHub</p>
             <p class="title-footer">Social Media</p>
             <div class="social-links-footer">
                 <div class="social-media">
-                    <img src="./assets/footer/twitter.png">
+                    <a href="https://x.com/GastroHubApp"><img alt="X logo" src="./assets/footer/twitter.webp"></a>
                 </div>
                 <div class="social-media">
-                    <img src="./assets/footer/facebook.png">
+                    <a href="https://www.facebook.com/profile.php?id=61568532765810"><img alt="Facebook logo" src="./assets/footer/facebook.webp"></a>
                 </div>
                 <div class="social-media">
-                    <img src="./assets/footer/linkedin.png">
+                    <a href="https://www.instagram.com/gastrohubapp/"><img alt="Instagram logo" src="./assets/footer/instagram.webp"></a>
                 </div>
+                
             </div>
         </div>
         <div class="links-footer">
@@ -200,17 +201,17 @@ function loadNavbarFooter() {
             <div class="line-footer"></div>
             <div class="urls-footer">
             <div>
-                <a href="/index.html">Home</a>
-                <a href="/features.html">Features</a>
-                <a href="/price.html">Price</a>
-                <a href="/news.html">News</a>
+                <a href="/">Home</a>
+                <a href="/features">Features</a>
+                <a href="/price">Price</a>
+                <a href="/news">News</a>
 
             </div>
             <div>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy-policy.html">Privacy policy</a>
-                <a href="/about_us.html">About Us</a>
-                                <a href="/legal-info.html">Legal Information</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy <!---->policy</a>
+                <a href="/about_us">About Us</a>
+                                <a href="/legal-info">Legal Information</a>
 
 </div>
 </div>
@@ -219,9 +220,9 @@ function loadNavbarFooter() {
             <p class="title-footer">Subscribe</p>
             <div class="line-footer"></div>
             <div class="subscribe-form">
-                <form action="#">
-                    <input type="text" placeholder="Email Address">
-                    <button></button>
+                <form action="https://acumbamail.com/newform/subscribe/HY8HybITdaUPmviDOva6jF3vsWvnMmdklMvCPOCrjkZ/51455/" method="post">
+                    <input placeholder="Email Address" id="r0c0m1i1" name="email_1" type="email" required="">
+                    <input class="button" type="submit" value="">
                 </form>
             </div>
         </div>
@@ -254,6 +255,41 @@ function loadNavbarFooter() {
         window.scrollY > 0 ? navbar.classList.add("header-shadow") : navbar.classList.remove("header-shadow");
     });
 
+    console.log('Navbar and footer loaded successfully.');
+
+    const user = localStorage.getItem('user');
+    const popoverButton = document.getElementById('popover-usr');
+    console.log(user);
+
+    if (user != null) {
+        const parsedUser = JSON.parse(user);
+
+        if (parsedUser.name && parsedUser.email && parsedUser.password) {
+
+            console.log('User already logged in');
+            popoverButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.location.href = '/profile';
+            });
+
+            if(parsedUser.image){
+                const image = document.getElementById("account-img");
+                image.setAttribute('src', parsedUser.image);
+                image.style.filter = 'none';
+
+            }
+        } else {
+            console.log('2NO User already logged in');
+            popoverButton.setAttribute('popovertarget', 'my-popover');
+        }
+        console.log(parsedUser.name);  
+        console.log(parsedUser.email);
+        console.log(parsedUser.password);
+    } else {
+        console.log('NO User already logged in');
+        popoverButton.setAttribute('popovertarget', 'my-popover');
+    }
+
 
 }
 
@@ -270,11 +306,11 @@ const cookieHTML = `
 
   <!-- Alerta de cookies -->
   <div id="cookieAlert" class="hidden fixed bottom-0 left-0 right-0 p-4 shadow-lg z-50">
-    <section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
-    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
-    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page.html" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
-    <div class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
-        <a href="cookie-page.html" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
+    <section id="cookie" class="fixed p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
+    <h2 id="cookieTitle" class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
+    <p id="cookieText" class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="cookie-page" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
+    <div id="cookieButtons" class="flex items-center justify-end mt-4 gap-x-4 shrink-0">
+        <a href="cookie-page" id="cookiePolicyLink" class="justify-start text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
             More Information
         </a>
         <button id="acceptCookies" class=" text-xs bg-green-700 font-medium rounded-lg hover:bg-green-800 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
@@ -291,98 +327,110 @@ const cookieHTML = `
 `;
 
 // Insertar el HTML antes de cerrar la etiqueta <body>
-body.insertAdjacentHTML('beforeend', cookieHTML);
 
-// Función para establecer una cookie
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Expira en X días
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
+if (window.location.pathname !== '/cookie-page' && window.location.pathname !== '/cookie-page.html') {
+    body.insertAdjacentHTML('beforeend', cookieHTML);
 
-// Función para obtener el valor de una cookie
-function getCookie(name) {
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookies = decodedCookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let c = cookies[i].trim();
-        if (c.indexOf(name + "=") === 0) {
-            return c.substring(name.length + 1);
+    // Función para establecer una cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Expira en X días
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Función para obtener el valor de una cookie
+    function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let c = cookies[i].trim();
+            if (c.indexOf(name + "=") === 0) {
+                return c.substring(name.length + 1);
+            }
+        }
+        return null;
+    }
+
+    // Función para verificar la existencia de una cookie
+    function checkCookie(name) {
+        return getCookie(name) !== null;
+    }
+
+    // Función para generar un identificador único (SSID simulado)
+    function generateSSID() {
+        return 'SSID-' + Math.random().toString(36).substring(2, 15) + Date.now();
+    }
+
+    // Función para mostrar la alerta de cookies
+    function showCookieAlert() {
+        const cookieAlert = document.getElementById('cookieAlert');
+        const cookieBackdrop = document.getElementById('cookieBackdrop');
+        cookieAlert.classList.remove('hidden');
+        cookieBackdrop.classList.remove('hidden'); // Muestra el fondo borroso
+    }
+
+    // Gestor d'events per a aceptar cookies
+    document.getElementById('acceptCookies').addEventListener('click', function () {
+        setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durant 7 dies
+        console.log('Cookies aceptadas');
+        document.getElementById('cookieAlert').classList.add('hidden');
+        document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fons
+        enableCookies();
+        manageSSID(); // Generar y guardar l'SSID només si s'accepten les cookies
+    });
+
+    // Gestor d'events per rebutjar cookies
+    document.getElementById('rejectCookies').addEventListener('click', function () {
+        setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 7 dies
+        console.log('Cookies rechazadas');
+        document.getElementById('cookieAlert').classList.add('hidden');
+        document.getElementById('cookieBackdrop').classList.add('hidden'); // Ocultar el fons
+        disableCookies();
+    });
+
+    // Comprueba si el usuario ya ha tomado una decisión sobre las cookies
+    if (!checkCookie('cookiesAccepted')) {
+        showCookieAlert(); // Muestra la alerta si no hay cookie guardada
+    } else {
+        const cookiesAccepted = getCookie('cookiesAccepted');
+        if (cookiesAccepted === 'false') {
+            disableCookies(); // Desactivar cookies no esenciales si el usuario las rechazó
+        } else {
+            enableCookies(); // Habilitar cookies si las aceptó
+            manageSSID(); // Generar y guardar el SSID solo si las cookies fueron aceptadas
         }
     }
-    return null;
-}
 
-// Función para verificar la existencia de una cookie
-function checkCookie(name) {
-    return getCookie(name) !== null;
-}
+    // Funció per a gestionar SSID
+    function manageSSID() {
+        if (getCookie('cookiesAccepted') === 'true') {
+            const existingSSID = getCookie('ssid');
+            const newSSID = generateSSID(); // Genera un nou SSID únic
 
-// Función para generar un identificador único (SSID simulado)
-function generateSSID() {
-    return 'SSID-' + Math.random().toString(36).substring(2, 15) + Date.now();
-}
+            if (existingSSID) {
+                console.log('SSID anterior eliminado:', existingSSID);
+            }
 
-// Función para mostrar la alerta de cookies
-function showCookieAlert() {
-    const cookieAlert = document.getElementById('cookieAlert');
-    const cookieBackdrop = document.getElementById('cookieBackdrop');
-    cookieAlert.classList.remove('hidden');
-    cookieBackdrop.classList.remove('hidden'); // Muestra el fondo borroso
-}
+            // Actualiza la cookie con el nuevo SSID
+            setCookie('ssid', newSSID, 7); // Guarda SSID durant 7 díes
+            console.log('SSID generado y actualizado:', newSSID);
+        } else {
+            console.log('El SSID no se actualiza ya que las cookies fueron rechazadas');
+        }
+    }
 
-// Gestor de eventos para aceptar cookies
-document.getElementById('acceptCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'true', 7); // Guardar la preferencia durante 1 año
-    console.log('Cookies aceptadas');
-    document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fondo
-    enableCookies();
-    manageSSID(); // Generar y guardar el SSID solo si se aceptan las cookies
-});
 
-// Gestor de eventos para rechazar cookies
-document.getElementById('rejectCookies').addEventListener('click', function() {
-    setCookie('cookiesAccepted', 'false', 7); // Guardar la preferencia durante 1 año
-    console.log('Cookies rechazadas');
-    document.getElementById('cookieAlert').classList.add('hidden');
-    document.getElementById('cookieBackdrop').classList.add('hidden'); // Oculta el fondo
-    disableCookies();
-});
+    // Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
+    function enableCookies() {
+        console.log("Cookies aceptadas. Cargando cookies no esenciales...");
+        // Aquí podrías cargar otras funcionalidades como Analytics o publicidad si lo deseas
+    }
 
-// Comprueba si el usuario ya ha tomado una decisión sobre las cookies
-if (!checkCookie('cookiesAccepted')) {
-    showCookieAlert(); // Muestra la alerta si no hay cookie guardada
-} else {
-    const cookiesAccepted = getCookie('cookiesAccepted');
-    if (cookiesAccepted === 'false') {
-        disableCookies(); // Desactivar cookies no esenciales si el usuario las rechazó
-    } else {
-        enableCookies(); // Habilitar cookies si las aceptó
-        manageSSID(); // Generar y guardar el SSID solo si las cookies fueron aceptadas
+    // Función para deshabilitar cookies no esenciales
+    function disableCookies() {
+        console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
+        // Aquí podrías asegurarte de no cargar ningún script adicional
     }
 }
 
-// Función para gestionar el SSID
-function manageSSID() {
-    if (!checkCookie('ssid') && getCookie('cookiesAccepted') === 'true') {
-        const ssid = generateSSID(); // Genera un SSID único
-        setCookie('ssid', ssid, 7); // Guarda el SSID en una cookie durante 1 año
-        console.log('SSID generado y guardado:', ssid);
-    } else if (getCookie('cookiesAccepted') === 'false') {
-        console.log('El SSID no se guarda ya que las cookies fueron rechazadas');
-    }
-}
-
-// Función para habilitar cookies no esenciales (como Google Analytics) - Opcional
-function enableCookies() {
-    console.log("Cookies aceptadas. Cargando cookies no esenciales...");
-    // Aquí podrías cargar otras funcionalidades como Analytics o publicidad si lo deseas
-}
-
-// Función para deshabilitar cookies no esenciales
-function disableCookies() {
-    console.log("Cookies rechazadas. Bloqueando cookies no esenciales.");
-    // Aquí podrías asegurarte de no cargar ningún script adicional
-}
