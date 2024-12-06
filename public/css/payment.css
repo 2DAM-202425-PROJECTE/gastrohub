@@ -354,7 +354,8 @@ Credit Card
 #card-expiration-year {
   height: 40px;
   border-radius: 5px;
-  font-size: 30px;
+  font-size: 17px;
+  text-align: center;
 }
 
 .total-price:nth-child(1){
@@ -542,12 +543,19 @@ Credit Card
   #card-expiration-month,
   #card-expiration-year {
     height: 60px;
+    font-size: 25px;
   }
 }
 
-.card-holder .card-name-person{
+.card-holder .card-name-person {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 95%;
+  max-width: 250px; /* Puedes agregar esto para evitar que el texto se desborde */
+}
+
+@media (max-width: 992px){
+  .card-holder .card-name-person {
+    max-width: 325px;
+  }
 }

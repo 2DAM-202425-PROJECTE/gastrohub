@@ -32,5 +32,11 @@
         margin-bottom: 80px;
     }
 
+    .us__center  {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
 }
+
