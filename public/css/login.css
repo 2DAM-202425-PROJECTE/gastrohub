@@ -433,7 +433,13 @@ button:hover {
 
 
 }
+
 .logo-login{
     width: 100px !important;
     height: 100px !important;
+}
+
+.eye-icon{
+    width: 25px !important;
+    height: 25px !important;
 }
